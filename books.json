@@ -1266,7 +1266,11 @@
  {
   "sheet": "Collection",
   "no": 18,
-  "links": {},
+  "links": {
+   "金石堂": "https://www.kingstone.com.tw/basic/2018630822785",
+   "誠品": "https://www.eslite.com/product/10012030392682949658009",
+   "三民書局": "https://www.sanmin.com.tw/product/index/014634568"
+  },
   "title": "戀愛條款未公開",
   "author": "李奕萱、M.S.Zenky、海盜船上的花、A.Z.",
   "isbn": "9786267750131",
@@ -2434,6 +2438,7 @@
    "Kobo": "https://www.kobo.com/tw/zh/ebook/7SNCGdSDtzGtGuu8b-TAXA",
    "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=168344",
    "Pubu": "https://www.pubu.com.tw/ebook/684188",
+   "誠品": "https://www.eslite.com/product/10072302132683209004000",
    "Google Play": "https://play.google.com/store/books/details?id=_vP8EQAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15543867",
    "HyRead": "https://ebook.hyread.com.tw/bookDetail.jsp?id=509853",
@@ -2462,6 +2467,7 @@
    "Kobo": "https://www.kobo.com/tw/zh/ebook/bj__5PlltT2OW5gI2KVebA",
    "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=168343",
    "Pubu": "https://www.pubu.com.tw/ebook/684187",
+   "誠品": "https://www.eslite.com/product/10072302132683209003003",
    "Google Play": "https://play.google.com/store/books/details?id=BPT8EQAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15543866",
    "HyRead": "https://ebook.hyread.com.tw/bookDetail.jsp?id=509852",
