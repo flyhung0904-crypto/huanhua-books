@@ -702,6 +702,7 @@
   "sheet": "推理雜誌",
   "no": 23,
   "links": {
+   "蝦皮": "https://shopee.tw/beguilingcreative/50715917974",
    "博客來": "https://www.books.com.tw/products/E050349073",
    "讀墨": "https://readmoo.com/book/210490940000101",
    "Kobo": "https://www.kobo.com/tw/zh/ebook/kYhMzRwakDyvMsjq5XG7xQ",
@@ -1284,7 +1285,9 @@
  {
   "sheet": "Collection",
   "no": 19,
-  "links": {},
+  "links": {
+   "蝦皮": "https://shopee.tw/product/1490519256/48265934971"
+  },
   "title": "後來他們都做了該做的事【選擇遊戲版】",
   "author": "款款、L.C、賴特、四弄一號、白帽子",
   "isbn": "9786267750865",
