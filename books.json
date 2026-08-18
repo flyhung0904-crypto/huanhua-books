@@ -4,7 +4,7 @@
   "no": 1,
   "links": {
    "蝦皮": "https://shopee.tw/%E6%8E%A8%E7%90%86%E9%9B%9C%E8%AA%8C%EF%BD%9C283%E6%9C%9F-%E5%BE%A9%E5%88%8A%E8%99%9F%EF%BD%9C%E3%80%90%E4%BD%99%E5%BF%83%E6%A8%82%E5%B0%88%E8%BC%AF%E3%80%91%EF%BD%9C%E8%91%89%E6%A1%91%E3%80%81%E9%AB%98%E9%9B%B2%E7%AB%A0%E3%80%81%E4%BA%9E%E7%91%9F%E6%9F%AF%E5%8D%97%E9%81%93%E7%88%BE%E3%80%81%E7%BE%85%E4%BE%9D%E7%B6%AD%E5%85%8B%E6%96%AF%E3%80%81%E9%A3%AF%E5%B2%A1%E7%A7%80%E4%B8%89-i.1490519256.28180506069?extraParams=%7B%22display_model_id%22%3A138266715426%2C%22model_selection_logic%22%3A3%7D",
-   "博客來": "https://www.sanmin.com.tw/product/index/015608490",
+   "博客來": "https://www.books.com.tw/products/0010991888",
    "讀墨": "https://readmoo.com/book/210332847000101",
    "BOOK☆WALKER": "https://www.bookwalker.com.tw/product/212697",
    "Kobo": "https://www.kobo.com/tw/zh/ebook/UtwAtu_KAzy5diNve-wYnA",
@@ -1268,9 +1268,13 @@
   "sheet": "Collection",
   "no": 18,
   "links": {
+   "蝦皮": "https://shopee.tw/beguilingcreative/40810792091",
+   "博客來": "https://www.books.com.tw/products/0011027358",
    "金石堂": "https://www.kingstone.com.tw/basic/2018630822785",
    "誠品": "https://www.eslite.com/product/10012030392682949658009",
-   "三民書局": "https://www.sanmin.com.tw/product/index/014634568"
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14229506",
+   "三民書局": "https://www.sanmin.com.tw/product/index/014634568",
+   "讀冊": "https://www.taaze.tw/products/11101068981.html"
   },
   "title": "戀愛條款未公開",
   "author": "李奕萱、M.S.Zenky、海盜船上的花、A.Z.",
@@ -1286,7 +1290,14 @@
   "sheet": "Collection",
   "no": 19,
   "links": {
-   "蝦皮": "https://shopee.tw/product/1490519256/48265934971"
+   "蝦皮": "https://shopee.tw/product/1490519256/48265934971",
+   "博客來": "https://www.books.com.tw/products/0011059968",
+   "金石堂": "https://www.kingstone.com.tw/basic/2018630995571",
+   "誠品": "https://www.eslite.com/product/10012030392683203059006",
+   "momo": "https://www.momoshop.com.tw/product/15558729",
+   "灰熊愛讀書": "https://www.iread.com.tw/Detail/ProdDetail/B001222735",
+   "三民書局": "https://www.sanmin.com.tw/product/index/015650378",
+   "讀冊": "https://www.taaze.tw/products/11101096432.html"
   },
   "title": "後來他們都做了該做的事【選擇遊戲版】",
   "author": "款款、L.C、賴特、四弄一號、白帽子",
@@ -2367,7 +2378,6 @@
    "Google Play": "https://play.google.com/store/books/details?id=Kt3xEQAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15439018",
    "HyRead": "https://ebook.hyread.com.tw/bookDetail.jsp?id=506448",
-   "華藝": "https://www.momoshop.com.tw/product/15439018",
    "灰熊愛讀書": "https://www.iread.com.tw/Detail/ProdDetail/B001217420",
    "Hami書城": "https://www.hamibook.com.tw/book/0100422277",
    "三民書局": "https://www.sanmin.com.tw/product/index/015608492",
@@ -2398,7 +2408,6 @@
    "Google Play": "https://play.google.com/store/books/details?id=Ht3xEQAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15439014",
    "HyRead": "https://ebook.hyread.com.tw/bookDetail.jsp?id=506447",
-   "華藝": "https://www.momoshop.com.tw/product/15439014",
    "灰熊愛讀書": "https://www.iread.com.tw/Detail/ProdDetail/B001217476",
    "Hami書城": "https://www.hamibook.com.tw/book/0100422275",
    "三民書局": "https://www.sanmin.com.tw/product/index/015608491",
@@ -2548,7 +2557,10 @@
  {
   "sheet": "Closet",
   "no": 1,
-  "links": {},
+  "links": {
+   "博客來": "https://www.books.com.tw/products/0011060999",
+   "金石堂": "https://www.kingstone.com.tw/basic/2018564017332"
+  },
   "title": "恆溫飼養",
   "author": "賴特",
   "isbn": "9786267750834",
