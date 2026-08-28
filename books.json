@@ -1270,8 +1270,11 @@
   "links": {
    "蝦皮": "https://shopee.tw/beguilingcreative/40810792091",
    "博客來": "https://www.books.com.tw/products/0011027358",
+   "讀墨": "https://readmoo.com/book/210416581000101",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/BM3c1Y1uczS6YQnDYUFGzg",
    "金石堂": "https://www.kingstone.com.tw/basic/2018630822785",
    "誠品": "https://www.eslite.com/product/10012030392682949658009",
+   "Google Play": "https://play.google.com/store/books/details?id=vy51EQAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14229506",
    "三民書局": "https://www.sanmin.com.tw/product/index/014634568",
    "讀冊": "https://www.taaze.tw/products/11101068981.html"
@@ -2520,7 +2523,11 @@
   "sheet": "Classic",
   "no": 34,
   "links": {
-   "博客來": "https://www.books.com.tw/products/E050352652"
+   "博客來": "https://www.books.com.tw/products/E050352652",
+   "讀墨": "https://readmoo.com/book/210495168000101",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/s9zfsNcfADq90JIQU3pXng",
+   "Google Play": "https://play.google.com/store/books/details?id=VsYDEgAAQBAJ",
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15611317"
   },
   "title": "富蘭其探長與紫色鐮刀",
   "author": "傅利曼・威爾斯・克洛弗茲",
@@ -2536,7 +2543,9 @@
   "sheet": "Classic",
   "no": 35,
   "links": {
-   "博客來": "https://www.books.com.tw/products/E050352650"
+   "博客來": "https://www.books.com.tw/products/E050352650",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/GL3DWTCuzTOyY9gINQiziw",
+   "Google Play": "https://play.google.com/store/books/details?id=VMYDEgAAQBAJ"
   },
   "title": "橡皮圈",
   "author": "雷克斯・史陶特",
@@ -2552,7 +2561,11 @@
   "sheet": "Classic",
   "no": 36,
   "links": {
-   "博客來": "https://www.books.com.tw/products/E050352651"
+   "博客來": "https://www.books.com.tw/products/E050352651",
+   "讀墨": "https://readmoo.com/book/210495167000101",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/j6JjhuKGlTe927L76ZfYQg",
+   "Google Play": "https://play.google.com/store/books/details?id=UsYDEgAAQBAJ",
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15611315"
   },
   "title": "誰的屍體？",
   "author": "桃樂西・Ｌ・榭爾絲",
