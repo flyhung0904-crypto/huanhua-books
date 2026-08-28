@@ -2519,7 +2519,9 @@
  {
   "sheet": "Classic",
   "no": 34,
-  "links": {},
+  "links": {
+   "博客來": "https://www.books.com.tw/products/E050352652"
+  },
   "title": "富蘭其探長與紫色鐮刀",
   "author": "傅利曼・威爾斯・克洛弗茲",
   "isbn": "9786267750872",
@@ -2533,7 +2535,9 @@
  {
   "sheet": "Classic",
   "no": 35,
-  "links": {},
+  "links": {
+   "博客來": "https://www.books.com.tw/products/E050352650"
+  },
   "title": "橡皮圈",
   "author": "雷克斯・史陶特",
   "isbn": "9786267750889",
@@ -2547,7 +2551,9 @@
  {
   "sheet": "Classic",
   "no": 36,
-  "links": {},
+  "links": {
+   "博客來": "https://www.books.com.tw/products/E050352651"
+  },
   "title": "誰的屍體？",
   "author": "桃樂西・Ｌ・榭爾絲",
   "isbn": "9786267750896",
