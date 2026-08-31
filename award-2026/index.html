@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026幻華中篇懸疑創作小說獎　徵文簡章</title>
+<style>
+  /* ── 配色：象牙紙（2026-08-31 Lighter 拍板甲案，乙案霧灰藍已刪） ────────────────────────────
+     深色主視覺帶壓在頂端，正文落在象牙紙上。
+     實心按鈕沿用主視覺的塗銷條近黑，強調色借官網的藍綠。 */
+  :root{
+    --hero:#111114;          /* 主視覺帶，與海報同底 */
+    --hero-line:#CFCABC;     /* 象牙細線 */
+    --hero-text:#E4E0D4;
+    --hero-dim:#8A867B;
+
+    --ground:#F4F1E9;        /* 紙 */
+    --card:#FBF9F4;
+    --ink:#22232A;
+    --mid:#5C5C62;
+    --dim:#8E8A80;
+    --rule:#DCD5C6;
+    --accent:#358A95;        /* 官網藍綠 */
+    --cta-bg:#111114;
+    --cta-ink:#F4F1E9;
+    --cta-hover:#2C2C33;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--ground)}
+  body{
+    color:var(--ink);
+    font-family:"Noto Serif TC","Source Han Serif TC","思源宋體",serif;
+    font-size:16px;line-height:1.9;letter-spacing:.015em;
+    -webkit-text-size-adjust:100%;
+  }
+
+  /* ── 深色主視覺帶 ── */
+  .hero{position:relative;background:var(--hero);overflow:hidden}
+  #kv{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .heroinner{position:relative;max-width:880px;margin:0 auto;padding:52px 24px 48px}
+  .brand{color:var(--hero-dim);font-size:12px;letter-spacing:.42em;
+         font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  h1{color:var(--hero-line);font-size:34px;line-height:1.32;letter-spacing:.08em;
+     font-weight:600;margin-top:12px}
+  .latin{color:var(--hero-dim);font-size:11px;letter-spacing:.4em;margin-top:12px;
+         font-family:"Helvetica Neue",Arial,sans-serif}
+  .kicker{color:var(--hero-text);font-size:16px;letter-spacing:.16em;margin-top:14px;
+          font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 64px}
+
+  /* ── 四項重點 ── */
+  .facts{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);
+         background:var(--card);border:1px solid var(--rule)}
+  .facts > div{padding:20px 18px}
+  .facts > div + div{border-left:1px solid var(--rule)}
+  .facts .k{color:var(--accent);font-size:11px;letter-spacing:.26em;margin-bottom:10px;
+            font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  .facts .v{color:var(--ink);font-size:14.5px;line-height:1.75}
+
+  /* ── 行動區 ── */
+  .acts{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-block;padding:14px 26px;font-size:15px;letter-spacing:.12em;
+       text-decoration:none;font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  .btn.primary{background:var(--cta-bg);color:var(--cta-ink);font-weight:600}
+  .btn.primary:hover{background:var(--cta-hover)}
+  .btn.ghost{border:1px solid var(--accent);color:var(--accent)}
+  .btn.ghost:hover{background:var(--accent);color:#fff}
+  .actnote{color:var(--mid);font-size:12.5px;margin-top:14px;line-height:1.9}
+
+  /* ── 兩組卡片 ── */
+  .groups{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;
+          background:var(--card);border:1px solid var(--rule)}
+  .groups > div{padding:24px 26px 26px}
+  .groups > div + div{border-left:1px solid var(--rule)}
+  .gname{color:var(--ink);font-size:18px;letter-spacing:.14em;font-weight:600;
+         font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  .gquota{color:var(--accent);font-size:15px;letter-spacing:.1em;margin-top:8px;
+          font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  .glabel{color:var(--dim);font-size:11.5px;letter-spacing:.24em;margin-top:16px;margin-bottom:6px;
+          font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  .groups p{margin-top:0;font-size:15px;color:var(--mid)}
+  .pick{color:var(--mid);margin-top:16px}
+
+  /* ── 條文 ── */
+  h2{color:var(--accent);font-size:16px;letter-spacing:.22em;font-weight:600;
+     font-family:"Noto Sans TC","微軟正黑體",sans-serif;
+     margin:46px 0 14px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+  p{margin-top:14px;text-align:justify;overflow-wrap:anywhere;word-break:break-word}
+  .body{margin-top:8px}
+
+  footer{margin-top:54px;padding-top:22px;border-top:1px solid var(--rule);
+         color:var(--mid);font-size:13.5px;line-height:2;
+         font-family:"Noto Sans TC","微軟正黑體",sans-serif}
+  footer .n{color:var(--ink);letter-spacing:.1em}
+  footer a{color:var(--accent)}
+
+  @media (max-width:640px){
+    body{font-size:15.5px;line-height:1.85}
+    .heroinner{padding:34px 18px 32px}
+    .wrap{padding:0 18px 48px}
+    h1{font-size:24px;letter-spacing:.05em}
+    .kicker{font-size:14px}
+    .facts{grid-template-columns:1fr 1fr}
+    .facts > div{padding:16px 14px}
+    .facts > div:nth-child(3),.facts > div:nth-child(4){border-top:1px solid var(--rule)}
+    .facts > div:nth-child(3){border-left:0}
+    .acts{gap:10px}
+    .btn{padding:13px 20px;font-size:14px}
+    .groups{grid-template-columns:1fr}
+    .groups > div + div{border-left:0;border-top:1px solid var(--rule)}
+    h2{margin:36px 0 12px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <svg id="kv"></svg>
+  <div class="heroinner">
+    <div class="brand">幻 華 創 造　主 辦</div>
+    <h1>2026幻華中篇懸疑創作小說獎</h1>
+    <div class="latin">HUANHUA NOVELLA MYSTERY AWARD</div>
+    <div class="kicker">徵文簡章</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="facts">
+    <div><div class="k">徵 件</div><div class="v">中篇懸疑小說<br>39500 字以上<br>40500 字以內</div></div>
+    <div><div class="k">收 件</div><div class="v">2026 年<br>9 月 5 日起<br>至 11 月 30 日止</div></div>
+    <div><div class="k">名 額</div><div class="v">作家組二名<br>公開組三名<br>（得從缺）</div></div>
+    <div><div class="k">出 版</div><div class="v">以單行本收入<br>「暗格」書系第二格<br>二○二七年內出版</div></div>
+  </div>
+
+  <div class="acts">
+    <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdhmW-dmV-rFh1AmLxyzss6X51P8vUIYrrPz4vvtMmm0sdeiA/viewform" target="_blank" rel="noopener">前 往 投 稿 表 單</a>
+    <a class="btn ghost" href="2026幻華中篇懸疑創作小說獎_徵文簡章.pdf" target="_blank" rel="noopener">下載徵文簡章 PDF</a>
+    <a class="btn ghost" href="2026幻華中篇懸疑創作小說獎_報名表.docx">下載報名表</a>
+  </div>
+  <div class="actnote">表單須登入 Google 帳號始能上傳檔案。沒有 Google 帳號者，請改以電子郵件寄至 beguiling.creative@gmail.com，並另附報名表。</div>
+
+  <div class="body">
+
+    <h2>一、徵件</h2>
+    <p>中篇懸疑小說，繁體中文創作。全文39500字以上、40500字以內，以 Word 字數統計之「字數」欄為準，含標點，不含空白。本獎為統一開本、統一版式之書系徵件，字數區間即為成書篇幅的依據，超出區間者不列入審查。</p>
+    <p>推理、犯罪、驚悚、社會派、心理懸疑、科幻懸疑與歷史懸疑皆在徵件範圍內。懸疑僅作為局部情節裝置者、以超自然力量作為最終解答且不受作品內部規則約束者、不設懸念的紀實寫作、任何形式的短篇小說集，均不在範圍內。</p>
+    <p>來稿只收已完成的全文。大綱、企劃書、部分章節試讀、未完稿之連載均不列入審查，收件後亦不通知補件。</p>
+    <p>作品之任何一部分已取得 ISBN 或 EISBN 者不得投稿。曾於網路平台或社群公開試閱、連載者可以投稿，入選後應於名單公布起三十日內自各平台下架。</p>
+
+    <h2>二、資格與組別</h2>
+    <p>共同資格：限具中華民國國籍、且年滿十八歲之本土作家。單一作者之作品，合著不列入審查。每人限投一件，不得跨組重複投稿。</p>
+    <p class="pick">兩組依身分區分，投稿人自行擇一報名。判別方式：符合第一組所列身分之一者，報第一組；兩項皆不符者，一律報第二組。</p>
+
+    <div class="groups">
+      <div>
+        <div class="gname">第一組　作家組</div>
+        <div class="gquota">入選二名</div>
+        <div class="glabel">適 用 對 象</div>
+        <p>台灣犯罪作家聯會現任會員；或曾於幻華創造出版著作之作者。兩者具其一即可。</p>
+      </div>
+      <div>
+        <div class="gname">第二組　公開組</div>
+        <div class="gquota">入選三名，得從缺</div>
+        <div class="glabel">適 用 對 象</div>
+        <p>不具第一組所列任一身分之創作者。無學經歷與發表經驗限制，首次寫作中篇者亦歡迎投稿。</p>
+      </div>
+    </div>
+    <p>達出版水準之作品不足應選名額時，依實際件數入選；不足額不遞補，亦不移轉至另一組。</p>
+
+    <h2>三、報名條件</h2>
+    <p>須購買《推理》雜誌二○二六年出版之任何一期（第二九七期至第三○八期），或幻華創造二○二六年出版之任何一部作品，並檢附購買證明。發票、網路書店訂單截圖、實體書店收據、電子書平台購買紀錄皆可，購買人須為投稿人本人。二○二五年以前之出版品、二手書、圖書館借閱與他人贈與，不列入採認。購買證明僅用於資格審查，評審結束後銷毀。</p>
+
+    <h2>四、收件</h2>
+    <p>二○二六年九月五日起至十一月三十日止，逾期不受理。</p>
+    <p>投稿請至線上表單填寫並上傳檔案，表單網址為 https://docs.google.com/forms/d/e/1FAIpQLSdhmW-dmV-rFh1AmLxyzss6X51P8vUIYrrPz4vvtMmm0sdeiA/viewform ，亦公告於台灣犯罪作家聯會官方網站。表單須登入 Google 帳號始能上傳檔案；沒有 Google 帳號者，請改以電子郵件寄至 beguiling.creative@gmail.com，主旨寫「幻華懸疑獎投稿＋組別＋作品名稱」。</p>
+    <p>兩種投稿方式皆須備妥：（一）小說全文，Word 檔與 PDF 檔各一份，內容一致，稿件內不得出現真實姓名、筆名、服務單位、致謝或社群帳號，中文字型十二級、單行間距、加註頁碼；（二）報名資料，線上表單填寫的內容即為報名資料，以電子郵件投稿者另附報名表 PDF 一份，報名表自官網下載；（三）購買證明圖檔；（四）身分證正面影本。購買證明與身分證正面影本僅供資格審查與簽約之用，不作其他用途；未入選者之影本於評審結束後銷毀，入選者之影本於簽約完成後銷毀。</p>
+    <p>單一檔案超過10 MB 者請先來信洽詢。截止日前得回到表單修改已送出之內容，或重新寄件，均以最後一次送出之版本為準。經表單投稿者，送出後系統自動寄發確認信；以電子郵件投稿者，主辦單位於收件後三個工作日內回覆確認信。未收到確認信者請主動來信查詢。</p>
+
+    <h2>五、評審與公布</h2>
+    <p>初審由幻華創造編輯部就完稿度與類型適性篩選，決審邀請小說作家、評論者、編輯與出版端代表共同評選。兩組分別評選、分別給獎，不合併排序。</p>
+    <p>入選名單預計於二○二七年三月前公布，確定日期另行公告於官方臉書與網站。凡完成報名且通過形式審查之作品，不論是否入選，均由編輯部撰寫閱讀意見，於名單公布後三十日內以電子郵件寄給投稿人。未入選作品之電子檔於意見寄出後三十日內刪除。</p>
+
+    <h2>六、獎勵</h2>
+    <p>每位入選人可獲：（一）保證出版；（二）獎金新台幣五千元整；（三）入選作品出版後致贈該書，定價總額新台幣五千元整，寄送費用由主辦單位負擔；（四）「暗格」書系第一格全套七冊，一套；（五）第二格全輯上市時舉辦之聯合新書發表會一場；（六）《推理》雜誌專訪專輯一則。獎金為稅前金額，依法代扣所得稅並開立扣繳憑單，贈書併入該年度所得申報。</p>
+
+    <h2>七、出版約定</h2>
+    <p>入選作品以單行本形式發行並收入「暗格」書系第二格，由幻華創造於二○二七年內出版，全輯統一裝幀、統一開本與版式，同一檔期上市，開本、版式與封面規劃由出版社統一決定。</p>
+    <p>入選作品一律以筆名發表。筆名於報名表填列，簽約後不再變更；作者本名僅供簽約、稅務申報與聯繫之用，主辦單位不對外揭露。</p>
+    <p>出版另行簽訂合約，載明版稅率、授權範圍與授權年限、贈書、自購與相關權利義務，簽約前得攜回審閱至少七日。出版前須經編輯部編輯流程，修訂項目與交稿期限由編輯與作者共同議定及線上確認。</p>
+
+    <h2>八、其他規定</h2>
+    <p>自寄件之日起至名單公布之日止，不得將同一作品或其改寫版本投稿其他徵件活動，亦不得公開發表或授權他人使用；欲撤回稿件應於截止收件日前來信告知，經回覆確認後生效。</p>
+    <p>作品須為作者本人創作，其情節、結構與文字並非由生成式人工智慧產出；以其輔助資料查詢、錯字檢查或格式處理不在此限。經出版社判斷確有代筆情形者，得不予錄取或取消入選資格，主辦單位不出具檢測報告，亦不受理申復。</p>
+    <p>經查有抄襲、代筆、一稿多投、隱瞞已正式出版或偽造購買證明者，取消參賽或入選資格，已發放之獎金與出版品應於通知後三十日內返還，出版合約同時失效。作品涉訟由參賽者自行負責。投稿作品不退件，請自行留存底稿。主辦單位得將入選作品之作者筆名、作品名稱與內容摘要用於本獎之宣傳與報導。本簡章未盡事宜，主辦單位得隨時修訂並公告於官方臉書與網站。</p>
+
+  </div>
+
+  <footer>
+    <div class="n">洽詢　幻華創造出版社　幻華懸疑獎工作小組</div>
+    <div>電子信箱：<a href="mailto:beguiling.creative@gmail.com">beguiling.creative@gmail.com</a>　　聯絡電話：02-29641941</div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var svg = document.getElementById('kv');
+  var W = 800, H = 240;
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+  var cx = W * 0.80, cy = H * 0.48, rx = W * 0.26, ry = W * 0.09;
+  var n = 120, span = H * 0.34, mr = Math.max(rx * 1.8, span * 2.4);
+  var p = ['<rect width="' + W + '" height="' + H + '" fill="#111114"/>',
+    '<defs><radialGradient id="hg" gradientUnits="userSpaceOnUse" cx="' + cx + '" cy="' + cy +
+    '" r="' + mr.toFixed(1) + '">' +
+    '<stop offset="0" stop-color="#fff" stop-opacity="1"/>' +
+    '<stop offset="0.40" stop-color="#fff" stop-opacity="0.92"/>' +
+    '<stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>' +
+    '<mask id="hm"><rect width="' + W + '" height="' + H + '" fill="url(#hg)"/></mask></defs>',
+    '<g mask="url(#hm)"><g fill="none" stroke="#CFCABC" stroke-width="0.6">'];
+  for (var i = 0; i < n; i++) {
+    var t = i / (n - 1);
+    var waist = 0.42 + 0.58 * Math.abs(Math.cos(t * Math.PI));
+    var y = cy - span + t * span * 2;
+    var op = (0.06 + 0.26 * Math.pow(Math.sin(t * Math.PI), 0.6)).toFixed(3);
+    p.push('<ellipse cx="' + cx.toFixed(1) + '" cy="' + y.toFixed(1) + '" rx="' +
+           (rx * waist).toFixed(1) + '" ry="' + (ry * waist).toFixed(1) +
+           '" opacity="' + op + '"/>');
+  }
+  p.push('</g><g fill="#111114">');
+  [0.885, 0.740, 0.885, 0.610, 0.885].forEach(function (w, i) {
+    p.push('<rect x="' + (cx - rx * 1.05).toFixed(1) + '" y="' + (cy - span * 0.5 + i * 15).toFixed(1) +
+           '" width="' + (rx * 2.1 * w).toFixed(1) + '" height="9"/>');
+  });
+  p.push('</g></g>');
+  svg.innerHTML = p.join('');
+})();
+</script>
+</body>
+</html>
