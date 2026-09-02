@@ -4,186 +4,166 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《推理》雜誌長期徵稿</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap">
 <style>
   :root {
     --paper:#f2ede3; --ink:#1d1916; --dark:#14110f;
-    --gold:#8a6a1e; --gold-lt:#c9a44c; --muted:#6b6258; --line:#ddd3c2;
+    --gold:#8a6a1e; --gold-lt:#c9a44c; --muted:#6f665b; --line:#ded4c3;
   }
   * { box-sizing:border-box; }
   html,body { margin:0; background:var(--paper); color:var(--ink);
     font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
-    line-height:1.85; -webkit-text-size-adjust:100%; }
-  .wrap { max-width:900px; margin:0 auto; padding:0 24px; }
-  h1,h2,h3,h4 { font-family:'Noto Serif TC',serif; margin:0; }
+    line-height:1.62; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:880px; margin:0 auto; padding:0 22px; }
+  h1,h2,th { font-family:'Noto Serif TC',serif; margin:0; }
 
-  header { background:var(--dark); color:#f6f1e7; padding:56px 0 48px; }
-  header h1 { font-size:40px; font-weight:900; letter-spacing:.04em; }
-  header .lede { margin:18px 0 0; font-size:17px; color:#d8cfc0; max-width:42em; }
-  header .next { margin:28px 0 0; padding-top:20px; border-top:1px solid #3a332c;
-    font-size:15px; color:var(--gold-lt); }
+  /* ── 首屏：封面帶 ＋ 標題 ─────────────────────────── */
+  header { background:var(--dark); color:#f6f1e7; position:relative; overflow:hidden; }
+  /* 封面帶：取畫面中段（⛔ 別用預設的置頂，那會 12 張都只露刊名、成一排重複的字） */
+  .strip { display:flex; height:96px; opacity:.34; }
+  .strip img { flex:1 1 0; min-width:0; height:96px; object-fit:cover;
+    object-position:center 78%; display:block; }
+  /* 下緣壓進底色，讓裁切看起來是收邊、不是被切掉 */
+  header::after { content:""; position:absolute; left:0; right:0; top:0; height:96px;
+    background:linear-gradient(to bottom, rgba(20,17,15,.15), var(--dark)); }
+  header .wrap { position:relative; padding-top:20px; padding-bottom:26px; }
+  header h1 { font-size:34px; font-weight:900; letter-spacing:.03em; }
+  header .lede { margin:10px 0 0; font-size:15.5px; color:#d5cbbb; max-width:40em; }
+  header .note { margin:14px 0 0; font-size:14px; color:var(--gold-lt); font-weight:500; }
 
-  section { padding:48px 0; border-bottom:1px solid var(--line); }
-  section:last-of-type { border-bottom:0; }
-  h2 { font-size:24px; font-weight:700; margin-bottom:6px; }
-  .sub { margin:0 0 26px; color:var(--muted); font-size:15px; }
+  section { padding:26px 0 0; }
+  section:last-of-type { padding-bottom:4px; }
+  h2 { font-size:20px; font-weight:700; }
+  .sub { margin:3px 0 12px; color:var(--muted); font-size:13.5px; }
 
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:3px; padding:20px 18px; }
-  .card.thin { border-color:var(--gold-lt); box-shadow:inset 3px 0 0 var(--gold-lt); }
-  .chip { margin:0 0 10px; font-size:12px; letter-spacing:.08em; color:var(--muted); }
-  .card.thin .chip { color:var(--gold); font-weight:700; }
-  .card h3 { font-size:19px; font-weight:700; line-height:1.4; }
-  .limit { margin:10px 0 0; font-size:26px; font-weight:700; color:var(--gold);
-    font-family:'Noto Serif TC',serif; }
-  .fee { margin:8px 0 0; font-size:13px; color:var(--muted); line-height:1.7; }
-  .thin-line { margin:22px 0 0; font-size:15px; color:var(--gold); font-weight:500; }
+  table { width:100%; border-collapse:collapse; background:#fff;
+    border:1px solid var(--line); font-size:14px; }
+  th, td { padding:9px 12px; border-top:1px solid var(--line); text-align:left;
+    vertical-align:middle; }
+  tr:first-child th, tr:first-child td { border-top:0; }
+  th { font-size:15.5px; font-weight:700; white-space:nowrap; width:1%; }
+  .num { font-family:'Noto Serif TC',serif; font-size:17px; font-weight:700;
+    color:var(--gold); white-space:nowrap; width:1%; }
+  .fee { color:var(--muted); font-size:12.5px; line-height:1.5; }
+  .st { width:1%; white-space:nowrap; text-align:right; }
 
-  ol,ul { margin:0; padding-left:1.4em; }
-  li { margin:0 0 10px; }
+  .tag { display:inline-block; font-size:11.5px; padding:1px 8px; border-radius:2px;
+    border:1px solid var(--line); color:var(--muted); }
+  .tag.open { border-color:var(--gold-lt); color:var(--gold); font-weight:700; }
+  .tag.long { border-color:var(--gold-lt); color:var(--gold); }
+  .tag.full { opacity:.7; }
+
+  /* ── 檔期表 ─────────────────────────────────────── */
+  .sched th { font-size:17px; color:var(--ink); line-height:1.15; }
+  .sched th .pub { display:block; font-family:'Noto Sans TC',sans-serif;
+    font-size:11.5px; font-weight:400; color:var(--muted); }
+  .sched .topic { font-weight:500; }
+  .sched .due { font-family:'Noto Serif TC',serif; font-size:16px; font-weight:700;
+    color:var(--gold); white-space:nowrap; width:1%; text-align:center; }
+  .sched tr.soon { background:#fbf7ee; }
+  .sched tr.soon th { color:var(--gold); }
+  .want { display:inline-block; font-size:11.5px; padding:1px 7px; margin:1px 3px 1px 0;
+    border:1px solid var(--gold-lt); color:var(--gold); border-radius:2px; }
+  .none { font-size:12px; color:var(--muted); }
+  .paused { margin:10px 0 0; font-size:13px; color:var(--muted); }
+
+  /* ── 兩欄並排的說明區 ───────────────────────────── */
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .cols h2 { font-size:17px; margin-bottom:8px; }
+  ol,ul { margin:0; padding-left:1.25em; font-size:13.5px; color:#3a332c; }
+  li { margin:0 0 6px; }
   .plain { list-style:none; padding:0; }
-  .plain li { padding-left:1.5em; position:relative; }
-  .plain li::before { content:"\FF5C"; position:absolute; left:0; color:var(--gold-lt); }
+  .plain li { padding-left:1.1em; position:relative; }
+  .plain li::before { content:"\FF0F"; position:absolute; left:-.1em; color:var(--gold-lt); }
 
-  .issues { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .issue h4 { font-size:15px; color:var(--gold); margin-bottom:10px;
-    padding-bottom:8px; border-bottom:1px solid var(--line); }
-  .issue ul { list-style:none; padding:0; }
-  .issue li { font-size:14px; line-height:1.6; margin-bottom:12px; }
-  .issue .t { display:block; }
-  .issue .a { display:block; color:var(--muted); font-size:13px; }
+  .reply { margin-top:22px; background:#fff; border:1px solid var(--line);
+    border-left:3px solid var(--gold); padding:12px 16px; font-size:14px; }
+  .reply span { color:var(--muted); }
 
-  .reply { background:#fff; border:1px solid var(--line); border-left:3px solid var(--gold);
-    padding:22px 24px; }
-  .reply p { margin:0; }
-  .reply p + p { margin-top:10px; color:var(--muted); font-size:15px; }
+  .closing { text-align:center; padding:26px 0 30px; }
+  .closing p { margin:0; font-size:16.5px; }
+  .closing .arrow { margin-top:6px; color:var(--gold); font-size:19px; }
 
-  .closing { text-align:center; padding:44px 0 52px; }
-  .closing p { margin:0; font-size:18px; }
-  .closing .arrow { margin-top:14px; color:var(--gold); font-size:22px; }
+  footer { background:var(--dark); color:#8d8479; font-size:12px; padding:14px 0; }
+  footer .wrap { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
 
-  footer { background:var(--dark); color:#8d8479; font-size:13px; padding:20px 0; }
-  footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  /* ── 窄螢幕：表格改堆疊卡片 ───────────────────────────
+     ⛔ 別讓表格在窄螢幕硬撐四欄——320px 實測「海內外文學評論」會被擠成一字一行。 */
+  @media (max-width:620px) {
+    table, tbody, tr, th, td { display:block; width:auto; }
+    tr { padding:11px 13px; border-top:1px solid var(--line); }
+    tbody tr:first-child { border-top:0; }
+    th, td { border-top:0; padding:0; white-space:normal; }
+    th { font-size:16.5px; }
+    .num { font-size:21px; margin:3px 0 1px; }
+    .fee { font-size:12.5px; }
+    .st { text-align:left; margin-top:7px; }
+    .sched th .pub { display:inline; margin-left:9px; }
+    .sched .due { text-align:left; font-size:15px; margin-top:2px; }
+    .sched .due::before { content:"截稿 "; font-family:'Noto Sans TC',sans-serif;
+      font-size:12.5px; font-weight:400; color:var(--muted); }
+    .sched .topic { margin-top:3px; }
+    .want { margin-top:6px; }
+  }
 
-  @media (max-width:760px) {
-    header { padding:40px 0 34px; }
-    header h1 { font-size:29px; }
-    header .lede { font-size:16px; }
-    section { padding:36px 0; }
-    .grid, .issues { grid-template-columns:1fr; }
-    .limit { font-size:23px; }
+  @media (max-width:720px) {
+    .strip { height:64px; } .strip img { height:64px; }
+    header h1 { font-size:26px; }
+    header .lede { font-size:14.5px; }
+    .cols { grid-template-columns:1fr; gap:18px; }
+    table { font-size:13px; }
+    th, td { padding:7px 9px; }
+    th { white-space:normal; }
+    .st { display:block; text-align:left; padding-top:0; }
+    .num { font-size:15px; }
   }
 </style>
 </head>
 <body>
 
 <header>
+  <div class="strip"><img src="covers/294.jpg" alt=""><img src="covers/295.jpg" alt=""><img src="covers/296.jpg" alt=""><img src="covers/297.jpg" alt=""><img src="covers/298.jpg" alt=""><img src="covers/299.jpg" alt=""><img src="covers/300.jpg" alt=""><img src="covers/301.jpg" alt=""><img src="covers/302.jpg" alt=""><img src="covers/303.jpg" alt=""><img src="covers/304.jpg" alt=""><img src="covers/305.jpg" alt=""></div>
   <div class="wrap">
     <h1>《推理》雜誌長期徵稿</h1>
     <p class="lede">題材不限，原創為唯一門檻。懸疑、推理、恐怖三種氣味，任一種都收。小說、詩、評論、散文，六個類別長期開放。</p>
-    <p class="next">下一期：第 305 期，2026 年 9 月 7 日 出刊</p>
+    <p class="note">最近的截稿日：9/15（第 307 期・金融犯罪）</p>
   </div>
 </header>
 
 <div class="wrap">
 
   <section>
-    <h2>六個類別，字數與稿酬</h2>
-    <p class="sub">以下為各類別的長度上限與稿酬標準。</p>
-    <div class="grid">
-      <article class="card">
-        <p class="chip">持續徵稿</p>
-        <h3>短篇小說</h3>
-        <p class="limit">20,000 字以內</p>
-        <p class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</p>
-      </article>
-      <article class="card">
-        <p class="chip">持續徵稿</p>
-        <h3>微型小說</h3>
-        <p class="limit">2,000 字以內</p>
-        <p class="fee">寄贈當期雜誌 1 冊</p>
-      </article>
-      <article class="card">
-        <p class="chip">持續徵稿</p>
-        <h3>海內外文學評論</h3>
-        <p class="limit">800 字以內</p>
-        <p class="fee">寄贈當期雜誌 1 冊</p>
-      </article>
-      <article class="card">
-        <p class="chip">持續徵稿</p>
-        <h3>影視、遊戲、動漫評介</h3>
-        <p class="limit">600 字以內</p>
-        <p class="fee">寄贈當期雜誌 1 冊</p>
-      </article>
-      <article class="card thin">
-        <p class="chip">特別歡迎</p>
-        <h3>現代詩創作</h3>
-        <p class="limit">40 行以內</p>
-        <p class="fee">寄贈當期雜誌 1 冊</p>
-      </article>
-      <article class="card thin">
-        <p class="chip">特別歡迎</p>
-        <h3>現代散文創作</h3>
-        <p class="limit">1,500 字以內</p>
-        <p class="fee">寄贈當期雜誌 1 冊</p>
-      </article>
+    <h2>徵稿類別</h2>
+    <p class="sub">長度上限與稿酬。收稿狀態依各期已排定的篇數即時判定。</p>
+    <table><tbody><tr><th>短篇小說</th><td class="num">20,000 字以內</td><td class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">6 期收稿中</span></td></tr><tr><th>微型小說</th><td class="num">2,000 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">8 期收稿中</span></td></tr><tr><th>海內外文學評論</th><td class="num">800 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>影視、遊戲、動漫評介</th><td class="num">600 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">8 期收稿中</span></td></tr><tr><th>現代詩創作</th><td class="num">40 行以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代散文創作</th><td class="num">1,500 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr></tbody></table>
+    
+  </section>
+
+  <section>
+    <h2>各期主題與截稿日</h2>
+    <p class="sub">主題稿投最貼近的那一期；非主題稿不受主題限制，依收稿狀況排期。已排滿的期別不列在這裡。</p>
+    <table class="sched"><tbody><tr class="soon"><th>307<span class="pub">2026.11 出刊</span></th><td class="topic">金融犯罪、財務、錢</td><td class="due">9/15</td><td><span class="want">微型小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>308<span class="pub">2026.12 出刊</span></th><td class="topic">法律、法庭、律師、偵查、法務、司法</td><td class="due">10/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>309<span class="pub">2027.01 出刊</span></th><td class="topic">社會工作、社工、社會安全、社會福利、社區、兒少保護</td><td class="due">11/15</td><td><span class="want">微型小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>310<span class="pub">2027.02 出刊</span></th><td class="topic">服裝、服飾、配件、穿著、褲子、外套、衣服</td><td class="due">12/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>311<span class="pub">2027.03 出刊</span></th><td class="topic">日常之謎：失物、錯認、生活裡的小異常，無屍體無犯罪</td><td class="due">1/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>312<span class="pub">2027.04 出刊</span></th><td class="topic">妖怪、妖異、神明、神</td><td class="due">2/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>313<span class="pub">2027.05 出刊</span></th><td class="topic">AI、人工智慧</td><td class="due">3/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>314<span class="pub">2027.06 出刊</span></th><td class="topic">精神醫學、心理創傷、不可靠敘事</td><td class="due">4/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr></tbody></table>
+  </section>
+
+  <section class="cols">
+    <div>
+      <h2>稿酬支付標準</h2>
+      <ul class="plain"><li>本土創作小說（短篇小說）：每字 0.1 元，支付上限為每篇 1,000 元，並寄贈當期雜誌 1 冊。</li><li>其餘本土稿件（極短篇小說、專欄文稿、各式評論、詩文創作等）：無另致稿酬，寄贈當期雜誌 1 冊。</li><li>海外稿件（即作者不具中華民國身分證，且無臺灣銀行發行之帳戶，或無臺灣通訊地址）：稿酬支付方式另行討論。</li><li>特約稿、特邀稿：稿酬另計，不受以上限制規範。</li></ul>
     </div>
-    <p class="thin-line">目前特別歡迎的類別：現代詩創作、現代散文創作。</p>
-  </section>
-
-  <section>
-    <h2>稿酬支付標準</h2>
-    <ul class="plain">
-<li>本土創作小說（短篇小說）：每字 0.1 元，支付上限為每篇 1,000 元，並寄贈當期雜誌 1 冊。</li>
-<li>其餘本土稿件（極短篇小說、專欄文稿、各式評論、詩文創作等）：無另致稿酬，寄贈當期雜誌 1 冊。</li>
-<li>海外稿件（即作者不具中華民國身分證，且無臺灣銀行發行之帳戶，或無臺灣通訊地址）：稿酬支付方式另行討論。</li>
-<li>特約稿、特邀稿：稿酬另計，不受以上限制規範。</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>著作權規範</h2>
-    <ul class="plain">
-<li>來稿者一經來稿即保證著作為原創且未侵害他人之著作權，如有所爭議，文責由本人自負。</li>
-<li>著作人享有著作人格權，本雜誌取得其他全部權利，並得以非專屬授權方式授予第三方進行重製，或透過網路提供服務，授權用戶下載、列印等行為。或有經授權所獲得之權利金，著作人概贈與本雜誌作為出版經費。</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>投稿前的五項確認</h2>
-    <ol>
-<li>全篇以繁體中文書寫。</li>
-<li>作品未曾在其他刊物或網路平臺發表。</li>
-<li>標題、筆名、字數三項寫在稿件開頭。</li>
-<li>聯絡方式填真實可收信的電子郵件；稿酬與贈書寄送需要通訊地址。</li>
-<li>一次投一篇。同時有多篇，分次填寫表單。</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>近期刊出的創作</h2>
-    <p class="sub">最近三期的小說與詩作。</p>
-    <div class="issues">
-      <div class="issue">
-        <h4>第 304 期</h4>
-        <ul><li><span class="t">〈入學通知單的祕密〉</span><span class="a">石川毅</span></li><li><span class="t">〈爺爺過世了〉</span><span class="a">白帽子</span></li><li><span class="t">〈流星殺手〉</span><span class="a">322</span></li><li><span class="t">〈年夜飯〉</span><span class="a">飛樑</span></li></ul>
-      </div>
-      <div class="issue">
-        <h4>第 303 期</h4>
-        <ul><li><span class="t">〈鱒魚〉</span><span class="a">白帽子</span></li><li><span class="t">〈戰時軍律〉</span><span class="a">鍾潁秀</span></li><li><span class="t">〈那群貪婪老人的爛水田〉</span><span class="a">柯彥豪</span></li><li><span class="t">〈最近六筆〉</span><span class="a">小安</span></li></ul>
-      </div>
-      <div class="issue">
-        <h4>第 302 期</h4>
-        <ul><li><span class="t">〈布萊德的怪獸〉</span><span class="a">張兆廷</span></li><li><span class="t">〈贏家〉</span><span class="a">白帽子</span></li><li><span class="t">〈火車難題〉</span><span class="a">塔塔</span></li><li><span class="t">〈躲貓貓〉</span><span class="a">魚肉（飲鴆）</span></li></ul>
-      </div>
+    <div>
+      <h2>著作權規範</h2>
+      <ul class="plain"><li>來稿者一經來稿即保證著作為原創且未侵害他人之著作權，如有所爭議，文責由本人自負。</li><li>著作人享有著作人格權，本雜誌取得其他全部權利，並得以非專屬授權方式授予第三方進行重製，或透過網路提供服務，授權用戶下載、列印等行為。或有經授權所獲得之權利金，著作人概贈與本雜誌作為出版經費。</li></ul>
     </div>
   </section>
 
-  <section>
-    <h2>審查與回覆</h2>
-    <div class="reply">
-      <p>審查結果以電子郵件寄出，通過與否都會回信。</p>
-      <p>近期來稿，九成在 4 週內收到審查結果。</p>
+  <section class="cols">
+    <div>
+      <h2>投稿前的確認</h2>
+      <ol><li>全篇以繁體中文書寫。</li><li>作品未曾在其他刊物或網路平臺發表。</li><li>聯絡方式填真實可收信的電子郵件；稿酬與贈書寄送需要通訊地址。</li><li>一次投一篇。同時有多篇，分次填寫表單。</li></ol>
+    </div>
+    <div>
+      <h2>審查與回覆</h2>
+      <div class="reply">審查結果以電子郵件寄出，通過與否都會回信。<br><span>近期來稿，九成在 4 週內收到審查結果。</span></div>
     </div>
   </section>
 
