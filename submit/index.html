@@ -67,6 +67,17 @@
   .none { font-size:12px; color:var(--muted); }
   .paused { margin:10px 0 0; font-size:13px; color:var(--muted); }
 
+  /* ── 問答集 ─────────────────────────────────────── */
+  .faq { display:grid; grid-template-columns:1fr 1fr; gap:0 26px; }
+  .qa { padding:11px 0; border-top:1px solid var(--line); }
+  .qa:first-child, .faq > .qa:nth-child(2) { border-top:0; padding-top:0; }
+  .qa .q { margin:0; font-family:'Noto Serif TC',serif; font-size:15px; font-weight:700; }
+  .qa .a { margin:4px 0 0; font-size:13.5px; color:#3a332c; }
+  @media (max-width:620px) {
+    .faq { grid-template-columns:1fr; }
+    .faq > .qa:nth-child(2) { border-top:1px solid var(--line); padding-top:11px; }
+  }
+
   /* ── 兩欄並排的說明區 ───────────────────────────── */
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
   .cols h2 { font-size:17px; margin-bottom:8px; }
@@ -126,7 +137,7 @@
   <div class="wrap">
     <h1>《推理》雜誌長期徵稿</h1>
     <p class="lede">題材不限，原創為唯一門檻。懸疑、推理、恐怖三種氣味，任一種都收。小說、詩、評論、散文，六個類別長期開放。</p>
-    <p class="note">最近的截稿日：9/15（第 307 期・金融犯罪）</p>
+    <p class="note">最近的截稿日：11/1（第 309 期・社會工作）</p>
   </div>
 </header>
 
@@ -135,14 +146,14 @@
   <section>
     <h2>徵稿類別</h2>
     <p class="sub">長度上限與稿酬。收稿狀態依各期已排定的篇數即時判定。</p>
-    <table><tbody><tr><th>短篇小說</th><td class="num">20,000 字以內</td><td class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">6 期收稿中</span></td></tr><tr><th>微型小說</th><td class="num">2,000 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">8 期收稿中</span></td></tr><tr><th>海內外文學評論</th><td class="num">800 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>影視、遊戲、動漫評介</th><td class="num">600 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">8 期收稿中</span></td></tr><tr><th>現代詩創作</th><td class="num">40 行以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代散文創作</th><td class="num">1,500 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr></tbody></table>
+    <table><tbody><tr><th>短篇小說</th><td class="num">20,000 字以內</td><td class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">4 期收稿中</span></td></tr><tr><th>微型小說</th><td class="num">2,000 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>海內外文學評論</th><td class="num">800 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>影視、遊戲、動漫評介</th><td class="num">600 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代詩創作</th><td class="num">40 行以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代散文創作</th><td class="num">1,500 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr></tbody></table>
     
   </section>
 
   <section>
     <h2>各期主題與截稿日</h2>
-    <p class="sub">主題稿投最貼近的那一期；非主題稿不受主題限制，依收稿狀況排期。已排滿的期別不列在這裡。</p>
-    <table class="sched"><tbody><tr class="soon"><th>307<span class="pub">2026.11 出刊</span></th><td class="topic">金融犯罪、財務、錢</td><td class="due">9/15</td><td><span class="want">微型小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>308<span class="pub">2026.12 出刊</span></th><td class="topic">法律、法庭、律師、偵查、法務、司法</td><td class="due">10/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>309<span class="pub">2027.01 出刊</span></th><td class="topic">社會工作、社工、社會安全、社會福利、社區、兒少保護</td><td class="due">11/15</td><td><span class="want">微型小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>310<span class="pub">2027.02 出刊</span></th><td class="topic">服裝、服飾、配件、穿著、褲子、外套、衣服</td><td class="due">12/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>311<span class="pub">2027.03 出刊</span></th><td class="topic">日常之謎：失物、錯認、生活裡的小異常，無屍體無犯罪</td><td class="due">1/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>312<span class="pub">2027.04 出刊</span></th><td class="topic">妖怪、妖異、神明、神</td><td class="due">2/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>313<span class="pub">2027.05 出刊</span></th><td class="topic">AI、人工智慧</td><td class="due">3/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span><span class="want">影視、遊戲、動漫評介</span></td></tr><tr><th>314<span class="pub">2027.06 出刊</span></th><td class="topic">精神醫學、心理創傷、不可靠敘事</td><td class="due">4/15</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">影視、遊戲、動漫評介</span></td></tr></tbody></table>
+    <p class="sub">主題稿投最貼近的那一期；非主題稿不受主題限制，依收稿狀況排期。已收足的期別不列在這裡。</p>
+    <table class="sched"><tbody><tr class="soon"><th>309<span class="pub">2027.01 出刊</span></th><td class="topic">社會工作、社工、社會安全、社會福利、社區、兒少保護</td><td class="due">11/1</td><td><span class="want">微型小說</span></td></tr><tr><th>310<span class="pub">2027.02 出刊</span></th><td class="topic">服裝、服飾、配件、穿著、褲子、外套、衣服</td><td class="due">12/1</td><td><span class="want">海內外文學評論</span></td></tr><tr><th>311<span class="pub">2027.03 出刊</span></th><td class="topic">日常之謎：失物、錯認、生活裡的小異常，無屍體無犯罪</td><td class="due">1/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>313<span class="pub">2027.05 出刊</span></th><td class="topic">AI、人工智慧</td><td class="due">3/1</td><td><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>314<span class="pub">2027.06 出刊</span></th><td class="topic">精神醫學、心理創傷、不可靠敘事</td><td class="due">4/1</td><td><span class="want">短篇小說</span></td></tr><tr><th>315<span class="pub">2027.07 出刊</span></th><td class="topic">媒體與犯罪：新聞報導、記者、輿論公審、爆料與名嘴、媒體造神與獵巫</td><td class="due">5/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr></tbody></table>
   </section>
 
   <section class="cols">
@@ -165,6 +176,11 @@
       <h2>審查與回覆</h2>
       <div class="reply">審查結果以電子郵件寄出，通過與否都會回信。<br><span>近期來稿，九成在 4 週內收到審查結果。</span></div>
     </div>
+  </section>
+
+  <section>
+    <h2>投稿人常問的</h2>
+    <div class="faq"><div class="qa"><p class="q">一次可以投幾篇？</p><p class="a">一篇。手上有多篇就分次填寫表單，各自送出。</p></div><div class="qa"><p class="q">作品一定要扣住當期主題嗎？</p><p class="a">微型小說收在主題特輯，要扣住該期主題。短篇小說與評論類不綁主題，依收稿狀況排期；貼近當期主題的稿，排期會快一些。</p></div><div class="qa"><p class="q">刊登想用筆名，稿酬與贈書怎麼寄？</p><p class="a">表單的真實姓名與筆名兩欄都填。刊登署名用筆名，稿酬與贈書寄給真實姓名與通訊地址。</p></div><div class="qa"><p class="q">人在海外可以投稿嗎？</p><p class="a">可以。不具中華民國身分證、且無臺灣銀行發行之帳戶或臺灣通訊地址者，稿酬支付方式另行討論。</p></div><div class="qa"><p class="q">多久會知道結果？</p><p class="a">通過與否都會以電子郵件回覆。近期來稿，九成在 4 週內收到審查結果。</p></div><div class="qa"><p class="q">錄用之後多久會刊出？</p><p class="a">依排入的期別，出刊年月見上方的檔期表。各期截稿日落在出刊月往前推兩個月的一號。</p></div><div class="qa"><p class="q">著作權會怎麼處理？</p><p class="a">著作人格權留在作者身上。雜誌取得其餘全部權利，並得以非專屬授權方式授予第三方重製，或透過網路提供服務。</p></div></div>
   </section>
 
   <div class="closing">
