@@ -67,16 +67,15 @@
   .none { font-size:12px; color:var(--muted); }
   .paused { margin:10px 0 0; font-size:13px; color:var(--muted); }
 
-  /* ── 問答集 ─────────────────────────────────────── */
-  .faq { display:grid; grid-template-columns:1fr 1fr; gap:0 26px; }
-  .qa { padding:11px 0; border-top:1px solid var(--line); }
-  .qa:first-child, .faq > .qa:nth-child(2) { border-top:0; padding-top:0; }
-  .qa .q { margin:0; font-family:'Noto Serif TC',serif; font-size:15px; font-weight:700; }
-  .qa .a { margin:4px 0 0; font-size:13.5px; color:#3a332c; }
-  @media (max-width:620px) {
-    .faq { grid-template-columns:1fr; }
-    .faq > .qa:nth-child(2) { border-top:1px solid var(--line); padding-top:11px; }
-  }
+  /* ── 問答集：單欄＋套色（2026-09-02 Lighter「不要雙欄且要套色」） ── */
+  .faq { background:#fbf7ee; border:1px solid var(--gold-lt); border-radius:3px;
+    padding:2px 22px; }
+  .qa { padding:13px 0; border-top:1px solid #e8dcc4; }
+  .qa:first-child { border-top:0; }
+  .qa .q { margin:0; font-family:'Noto Serif TC',serif; font-size:15.5px;
+    font-weight:700; color:var(--gold); }
+  .qa .a { margin:5px 0 0; font-size:13.5px; color:#3a332c; }
+  @media (max-width:620px) { .faq { padding:2px 15px; } }
 
   /* ── 兩欄並排的說明區 ───────────────────────────── */
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
@@ -146,14 +145,14 @@
   <section>
     <h2>徵稿類別</h2>
     <p class="sub">長度上限與稿酬。收稿狀態依各期已排定的篇數即時判定。</p>
-    <table><tbody><tr><th>短篇小說</th><td class="num">20,000 字以內</td><td class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">4 期收稿中</span></td></tr><tr><th>微型小說</th><td class="num">2,000 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>海內外文學評論</th><td class="num">800 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">3 期收稿中</span></td></tr><tr><th>影視、遊戲、動漫評介</th><td class="num">600 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代詩創作</th><td class="num">40 行以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代散文創作</th><td class="num">1,500 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr></tbody></table>
+    <table><tbody><tr><th>短篇小說</th><td class="num">20,000 字以內</td><td class="fee">每字 0.1 元，單篇上限 1,000 元；寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">17 期收稿中</span></td></tr><tr><th>微型小說</th><td class="num">2,000 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">14 期收稿中</span></td></tr><tr><th>海內外文學評論</th><td class="num">800 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag open">4 期收稿中</span></td></tr><tr><th>影視、遊戲、動漫評介</th><td class="num">600 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代詩創作</th><td class="num">40 行以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr><tr><th>現代散文創作</th><td class="num">1,500 字以內</td><td class="fee">寄贈當期雜誌 1 冊</td><td class="st"><span class="tag long">長期收稿</span></td></tr></tbody></table>
     
   </section>
 
   <section>
     <h2>各期主題與截稿日</h2>
-    <p class="sub">主題稿投最貼近的那一期；非主題稿不受主題限制，依收稿狀況排期。已收足的期別不列在這裡。</p>
-    <table class="sched"><tbody><tr class="soon"><th>309<span class="pub">2027.01 出刊</span></th><td class="topic">社會工作、社工、社會安全、社會福利、社區、兒少保護</td><td class="due">11/1</td><td><span class="want">微型小說</span></td></tr><tr><th>310<span class="pub">2027.02 出刊</span></th><td class="topic">服裝、服飾、配件、穿著、褲子、外套、衣服</td><td class="due">12/1</td><td><span class="want">海內外文學評論</span></td></tr><tr><th>311<span class="pub">2027.03 出刊</span></th><td class="topic">日常之謎：失物、錯認、生活裡的小異常，無屍體無犯罪</td><td class="due">1/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>313<span class="pub">2027.05 出刊</span></th><td class="topic">AI、人工智慧</td><td class="due">3/1</td><td><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>314<span class="pub">2027.06 出刊</span></th><td class="topic">精神醫學、心理創傷、不可靠敘事</td><td class="due">4/1</td><td><span class="want">短篇小說</span></td></tr><tr><th>315<span class="pub">2027.07 出刊</span></th><td class="topic">媒體與犯罪：新聞報導、記者、輿論公審、爆料與名嘴、媒體造神與獵巫</td><td class="due">5/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr></tbody></table>
+    <p class="sub">期數為暫時排定，實際刊登請依編輯部聯繫信件為準。</p>
+    <table class="sched"><tbody><tr class="soon"><th>309<span class="pub">2027.01 出刊</span></th><td class="topic">社會工作、社工、社會安全、社會福利、社區、兒少保護</td><td class="due">11/1</td><td><span class="want">微型小說</span></td></tr><tr><th>310<span class="pub">2027.02 出刊</span></th><td class="topic">服裝、服飾、配件、穿著、褲子、外套、衣服</td><td class="due">12/1</td><td><span class="want">海內外文學評論</span></td></tr><tr><th>311<span class="pub">2027.03 出刊</span></th><td class="topic">日常之謎：失物、錯認、生活裡的小異常，無屍體無犯罪</td><td class="due">1/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>313<span class="pub">2027.05 出刊</span></th><td class="topic">AI、人工智慧</td><td class="due">3/1</td><td><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>314<span class="pub">2027.06 出刊</span></th><td class="topic">精神醫學、心理創傷、不可靠敘事</td><td class="due">4/1</td><td><span class="want">短篇小說</span></td></tr><tr><th>315<span class="pub">2027.07 出刊</span></th><td class="topic">媒體與犯罪：新聞報導、記者、輿論公審、爆料與名嘴、媒體造神與獵巫</td><td class="due">5/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>316<span class="pub">2027.08 出刊</span></th><td class="topic">寓言推理</td><td class="due">6/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>317<span class="pub">2027.09 出刊</span></th><td class="topic">飲料、和「喝」這個動作有關、酒、咖啡、茶、水</td><td class="due">7/1</td><td><span class="want">短篇小說</span><span class="want">海內外文學評論</span></td></tr><tr><th>318<span class="pub">2027.10 出刊</span></th><td class="topic">鄉下、鄉野空間、鄉村</td><td class="due">8/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>319<span class="pub">2027.11 出刊</span></th><td class="topic">古典本格詭計</td><td class="due">9/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>320<span class="pub">2027.12 出刊</span></th><td class="topic">哲學、哲學思考、哲學家</td><td class="due">10/1</td><td><span class="want">短篇小說</span></td></tr><tr><th>321<span class="pub">2028.01 出刊</span></th><td class="topic">交通工具、汽車、火車、公車、飛機、高鐵、捷運</td><td class="due">11/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>322<span class="pub">2028.02 出刊</span></th><td class="topic">鑑識、檢察系統</td><td class="due">12/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>323<span class="pub">2028.03 出刊</span></th><td class="topic">藝術品犯罪</td><td class="due">1/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>324<span class="pub">2028.04 出刊</span></th><td class="topic">氣候：雨、雪、雷、風，不收晴朗、陰天</td><td class="due">2/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>325<span class="pub">2028.05 出刊</span></th><td class="topic">連續殺人案</td><td class="due">3/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>326<span class="pub">2028.06 出刊</span></th><td class="topic">居住空間</td><td class="due">4/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>327<span class="pub">2028.07 出刊</span></th><td class="topic">祕密、黑歷史</td><td class="due">5/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr><tr><th>328<span class="pub">2028.08 出刊</span></th><td class="topic">競技、體育、賽事</td><td class="due">6/1</td><td><span class="want">微型小說</span><span class="want">短篇小說</span></td></tr></tbody></table>
   </section>
 
   <section class="cols">
