@@ -70,7 +70,10 @@
   /* 權重堆疊條 */
   .stack{display:flex;height:56px;margin:26px 0 0;overflow:hidden}
   .stack div{display:flex;align-items:center;justify-content:center;
-    font-family:system-ui,sans-serif;font-size:14px;color:#fff;letter-spacing:.06em}
+    font-family:system-ui,sans-serif;font-size:13.5px;color:#fff;letter-spacing:.04em;
+    white-space:nowrap;overflow:hidden}
+  .stack .s2,.stack .s3{font-size:12px}
+  .stack .s2 b,.stack .s3 b{margin-right:5px}
   .stack .c{background:var(--accent)}
   .stack .c2{background:#96382f}
   .stack .s1{background:#b08a52}
@@ -78,10 +81,9 @@
   .stack .s3{background:#d9c6a8;color:#4a4136}
   .stack b{font-weight:600;margin-right:7px}
   .legend{display:grid;grid-template-columns:30fr 30fr 20fr 10fr 10fr;gap:0;margin:0}
-  .legend div{padding:14px 14px 0;font-size:13px;color:#4d4740;line-height:1.8;
+  .legend div{padding:14px 12px 0;font-size:12.5px;color:#4d4740;line-height:1.8;
     border-top:1px solid var(--line)}
   .legend div:first-child{padding-left:0}
-  .legend .pair{grid-column:span 2}
   .corehint{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--accent);
     letter-spacing:.1em;margin:14px 0 0}
 
@@ -142,8 +144,12 @@
     .lede,.cards,.quotes,.rules{grid-template-columns:1fr}
     .legend{grid-template-columns:1fr}
     .legend div{padding-left:0}
-    .stack{height:auto;flex-wrap:wrap}
-    .stack div{width:50%!important;height:44px}
+    .stack{height:auto;flex-direction:column}
+    .stack div{width:100%!important;height:40px;justify-content:flex-start;
+      padding-left:16px;font-size:14px}
+    .stack .s2,.stack .s3{font-size:14px}
+    .legend div{padding:12px 0 0;border-top:1px solid var(--line)}
+    .legend div:first-child{padding-top:14px}
     .band .inner,.cer{grid-template-columns:1fr}
     .cer .l{padding:24px}
     h1{font-size:26px}
@@ -250,15 +256,15 @@
     <div class="c"  style="width:30%"><b>在地性</b>30%</div>
     <div class="c2" style="width:30%"><b>推理性</b>30%</div>
     <div class="s1" style="width:20%"><b>可讀性</b>20%</div>
-    <div class="s2" style="width:10%">10%</div>
-    <div class="s3" style="width:10%">10%</div>
+    <div class="s2" style="width:10%"><b>社會性</b>10%</div>
+    <div class="s3" style="width:10%"><b>文學性</b>10%</div>
   </div>
   <div class="legend">
     <div>台灣地域文化、歷史傷痕或日常細節是否成為推理核心；抽掉台灣設定，謎題就不成立。</div>
     <div>解謎合乎理、法、情，偵推邏輯具現實感，線索前後一致且符合公平原則。</div>
     <div>流暢度、節奏掌控，以及進入大眾市場的商業發展潛力。</div>
-    <div class="pair"><b>社會性</b>　犯罪背後是否反映台灣當代社會現象、體制漏洞或時代議題。<br>
-      <b>文學性</b>　文字技藝、敘事視角的獨特性、人物塑造的層次。</div>
+    <div>犯罪背後是否反映台灣當代社會現象、體制漏洞或時代議題。</div>
+    <div>文字技藝、敘事視角的獨特性、人物塑造的層次。</div>
   </div>
   <p class="corehint">在地性與推理性合佔六成，是本獎的雙核心。</p>
 
