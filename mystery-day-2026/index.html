@@ -35,7 +35,7 @@
   .stage{position:relative;background:linear-gradient(180deg,#7FDCD9 0%,#BFEDE8 45%,#E9EAD9 78%,var(--ground) 100%);overflow:hidden}
   .stage::before{content:"";position:absolute;inset:0;background:url(img/sky.jpg) center top/cover;opacity:.35;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 85%);mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 85%)}
   .stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,rgba(244,241,234,0),var(--ground))}
-  .stagein{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:40px 24px 44px;display:grid;grid-template-columns:440px 1fr;gap:14px}
+  .stagein{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:40px 24px 44px;display:grid;grid-template-columns:430px 1fr;gap:10px}
 
   .brand{font-family:var(--sans);font-size:11px;letter-spacing:.42em;color:var(--mid)}
   .yr{font-family:var(--mono);font-size:13px;letter-spacing:.5em;color:var(--teal);margin-top:20px}
@@ -79,24 +79,24 @@
   .logos{margin-top:16px;display:flex;align-items:center;gap:22px;opacity:.72}
   .logos img{height:28px;width:auto}
   /* 塔＋樓層線＋樓層牌 */
-  .tower{position:relative;height:640px}
+  .tower{position:relative;height:560px}
   .tower img.t{position:absolute;left:0;top:0;height:100%;width:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 94%,transparent 100%);mask-composite:intersect}
   .leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-  .leaders line{stroke:var(--ember);stroke-width:1.5;stroke-dasharray:4 3}
-  .dot{position:absolute;left:262px;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--ember);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+  .leaders polyline{fill:none;stroke:var(--ember);stroke-width:1.5;stroke-linejoin:round}
+  .dot{position:absolute;left:222px;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--ember);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(255,255,255,.7)}
   .dot::before{content:attr(data-n)}
-  .tower > .plate{position:absolute;left:300px;right:0;height:60px}
+  .tower > .plate{position:absolute;left:258px;right:0;height:50px}
   .plate{display:flex;text-decoration:none;color:inherit;align-items:stretch;background:var(--paper);border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule);text-align:left;transition:transform .15s,box-shadow .15s}
   .plate:hover{transform:translateX(3px);box-shadow:0 2px 0 var(--teal)}
   .plate.on{border-color:var(--ink);box-shadow:0 2px 0 var(--ink);transform:translateX(3px)}
-  .plate .no{flex:0 0 40px;background:var(--ink);color:var(--ground);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);line-height:1.1}
-  .plate .no b{font-size:17px;font-weight:600}
+  .plate .no{flex:0 0 34px;background:var(--ink);color:var(--ground);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);line-height:1.1}
+  .plate .no b{font-size:15px;font-weight:600}
   .plate .no small{font-size:9px;letter-spacing:.14em;color:var(--sky-deep)}
   .plate.on .no{background:var(--ember)}
-  .plate .tx{padding:0 10px;flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
-  .plate .tm{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--teal);font-weight:600}
-  .plate .nm{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.02em;line-height:1.3}
-    .plate .more{flex:0 0 18px;display:flex;align-items:center;justify-content:center;color:var(--dim);font-family:var(--mono);font-size:14px}
+  .plate .tx{padding:0 7px;flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+  .plate .tm{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--teal);font-weight:600}
+  .plate .nm{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:0;line-height:1.3;white-space:nowrap}
+    .plate .more{flex:0 0 10px;display:flex;align-items:center;justify-content:center;color:var(--dim);font-family:var(--mono);font-size:14px}
   .plate.on .more{color:var(--ember)}
     .floorlist{display:none}
   .hint{position:absolute;right:0;bottom:-30px;font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--mid)}
@@ -229,7 +229,7 @@
     .tower > .plate,.dot,.leaders{display:none}
     .floorlist{display:flex;flex-direction:column;justify-content:space-between;gap:6px;grid-column:2;grid-row:1;min-width:0}
     .floorlist .plate{position:static;height:auto;min-height:56px;width:100%}
-    .plate .nm{white-space:normal}
+    .plate .nm{white-space:normal;font-size:13px}
     .hint{position:static;grid-column:1/-1;grid-row:2;margin-top:0}
     .scripts{grid-template-columns:1fr}
     .md{grid-template-columns:1fr;gap:4px}
@@ -286,17 +286,17 @@
       <img class="t" src="img/tower.jpg" alt="2026 詭祕日主視覺：一座六層的塔">
       <svg class="leaders" aria-hidden="true"></svg>
       <span class="dot" data-n="6" style="top:11%"></span>
-      <a class="plate" href="#f6" data-f="6" style="top:calc(6% + 0 * 16.6%)"><div class="no"><b>6</b><small>F</small></div><div class="tx"><div class="tm">16:30</div><div class="nm">簽書與現場交流</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f6" data-f="6" style="top:96px"><div class="no"><b>6</b><small>F</small></div><div class="tx"><div class="tm">16:30</div><div class="nm">簽書與現場交流</div></div><div class="more">↓</div></a>
       <span class="dot" data-n="5" style="top:30%"></span>
-      <a class="plate" href="#f5" data-f="5" style="top:calc(6% + 1 * 16.6%)"><div class="no"><b>5</b><small>F</small></div><div class="tx"><div class="tm">16:00</div><div class="nm">「2026 完美犯罪讀這本！」頒獎典禮</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f5" data-f="5" style="top:160px"><div class="no"><b>5</b><small>F</small></div><div class="tx"><div class="tm">16:00</div><div class="nm">「2026 完美犯罪讀這本！」頒獎典禮</div></div><div class="more">↓</div></a>
       <span class="dot" data-n="4" style="top:47%"></span>
-      <a class="plate" href="#f4" data-f="4" style="top:calc(6% + 2 * 16.6%)"><div class="no"><b>4</b><small>F</small></div><div class="tx"><div class="tm">15:30</div><div class="nm">「第九屆林佛兒獎」頒獎典禮</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f4" data-f="4" style="top:224px"><div class="no"><b>4</b><small>F</small></div><div class="tx"><div class="tm">15:30</div><div class="nm">「第九屆林佛兒獎」頒獎典禮</div></div><div class="more">↓</div></a>
       <span class="dot" data-n="3" style="top:62%"></span>
-      <a class="plate" href="#f3" data-f="3" style="top:calc(6% + 3 * 16.6%)"><div class="no"><b>3</b><small>F</small></div><div class="tx"><div class="tm">15:00</div><div class="nm">偵探的步伐——漫談寫作習慣</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f3" data-f="3" style="top:288px"><div class="no"><b>3</b><small>F</small></div><div class="tx"><div class="tm">15:00</div><div class="nm">偵探的步伐——漫談寫作習慣</div></div><div class="more">↓</div></a>
       <span class="dot" data-n="2" style="top:75%"></span>
-      <a class="plate" href="#f2" data-f="2" style="top:calc(6% + 4 * 16.6%)"><div class="no"><b>2</b><small>F</small></div><div class="tx"><div class="tm">14:40</div><div class="nm">2026 犯聯作家創作巡禮</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f2" data-f="2" style="top:352px"><div class="no"><b>2</b><small>F</small></div><div class="tx"><div class="tm">14:40</div><div class="nm">2026 犯聯作家創作巡禮</div></div><div class="more">↓</div></a>
       <span class="dot" data-n="1" style="top:88%"></span>
-      <a class="plate" href="#f1" data-f="1" style="top:calc(6% + 5 * 16.6%)"><div class="no"><b>1</b><small>F</small></div><div class="tx"><div class="tm">14:30</div><div class="nm">活動開始・14:00 開放入場</div></div><div class="more">↓</div></a>
+      <a class="plate" href="#f1" data-f="1" style="top:416px"><div class="no"><b>1</b><small>F</small></div><div class="tx"><div class="tm">14:30</div><div class="nm">活動開始・14:00 開放入場</div></div><div class="more">↓</div></a>
       <div class="hint">點樓層牌看該時段內容</div>
       <div class="floorlist" id="floorlist"></div>
     </div>
@@ -383,8 +383,7 @@
       <div class="eh"><b>邀請函</b><span>INVITATION</span></div>
       <p class="lead">各位好朋友，您好：</p>
         <p>2026 年台灣犯罪作家聯會持續深耕本土、接軌國際，會員展現出蓬勃的創作力與行動力，《推理》雜誌復刊至今已跨過 300 期的里程碑，以月刊形式成為本土創作的發表重鎮、「林佛兒獎」的短篇創作新人獎復辦邁入第五屆、以出版獎勵為主的「完美犯罪讀這本」也連續五年辦理。不久的將來也將開創「中篇懸疑創作小說獎」、「CWT 台港犯罪社會書獎」，展現出不同以往的全新面貌。</p>
-        <p>一同感受台灣犯罪文學的活躍氣息，見證屬於我們的故事與未來。</p>
-        <p>※ 敬請於 2026 年 9 月 30 日前賜復出席意願及參加人數，以利敝會後續相關事務安排。</p>
+        <p>歡迎一同感受台灣犯罪文學的活躍氣息，見證屬於我們的故事與未來。</p>
       <div class="sig">台灣犯罪作家聯會 執行主席 &amp; 理事長<b>既晴</b></div>
     </div>
 
@@ -448,7 +447,8 @@
       tw.querySelectorAll('.dot').forEach(function(d){
         var p=tw.querySelector('.tower > .plate[data-f="'+d.getAttribute('data-n')+'"]'); if(!p) return;
         var a=d.getBoundingClientRect(), b=p.getBoundingClientRect();
-        out+='<line x1="'+(a.left-r.left+a.width/2+11)+'" y1="'+(a.top-r.top+a.height/2)+'" x2="'+(b.left-r.left)+'" y2="'+(b.top-r.top+b.height/2)+'"/>';
+        var x0=a.left-r.left+a.width/2+11, y0=a.top-r.top+a.height/2, x1=b.left-r.left, y1=b.top-r.top+b.height/2, xs=x0+9;
+        out+='<polyline points="'+x0+','+y0+' '+xs+','+y0+' '+xs+','+y1+' '+x1+','+y1+'"/>';
       });
       svg.innerHTML=out;
     }
