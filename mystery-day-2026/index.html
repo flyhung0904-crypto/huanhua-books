@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 詭祕日｜台灣犯罪作家聯會</title>
+<meta name="description" content="台灣犯罪文學界的年度盛事。2026 年 10 月 18 日（日）14:30，紀州庵文學森林 2 樓多功能空間。完美犯罪讀這本、第九屆林佛兒獎頒獎典禮、偵探的步伐——漫談寫作習慣。">
+<style>
+  /* 配色跟著海報：湖水藍天空、象牙白紙、海報上那顆橘紅小行星當強調色。
+     版面骨架沿用徵獎頁（宋體正文、黑體標籤），三頁在 Wix 站上看起來是同一套。 */
+  :root{
+    --sky:#BFDFE0;
+    --sky-deep:#8FC3C7;
+    --ground:#F5F3EC;
+    --card:#FBFAF6;
+    --ink:#22262B;
+    --mid:#55606A;
+    --dim:#8C949B;
+    --rule:#D9DBD5;
+    --accent:#2E7F8A;
+    --ember:#D9603A;
+    --cta-bg:#22262B;
+    --cta-ink:#F5F3EC;
+    --sans:"Noto Sans TC","微軟正黑體","PingFang TC",sans-serif;
+    --serif:"Noto Serif TC","Source Han Serif TC","思源宋體","PingFang TC",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--ground)}
+  body{color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.9;letter-spacing:.015em;-webkit-text-size-adjust:100%}
+  a{color:var(--accent)}
+  img{max-width:100%;display:block}
+
+  /* ── 主視覺帶 ── */
+  .hero{position:relative;background:var(--sky) url(img/sky.jpg) center/cover;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(191,223,224,0) 55%,var(--ground) 100%)}
+  .heroinner{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:44px 24px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:end}
+  .herotext{padding-bottom:56px}
+  .brand{font-family:var(--sans);font-size:12px;letter-spacing:.42em;color:var(--mid)}
+  .year{font-family:"Helvetica Neue",Arial,sans-serif;font-size:15px;letter-spacing:.5em;color:var(--accent);margin-top:22px}
+  h1{font-size:64px;line-height:1.1;letter-spacing:.16em;font-weight:600;color:var(--ink);margin-top:6px}
+  .latin{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.42em;color:var(--mid);margin-top:14px}
+  .slogan{font-family:var(--sans);font-size:17px;letter-spacing:.14em;line-height:1.9;color:var(--ink);margin-top:26px}
+  .slogan small{display:block;font-size:14px;color:var(--mid);letter-spacing:.1em}
+  .heroart{align-self:end}
+  .heroart img{width:100%;height:auto;border-radius:2px 2px 0 0;box-shadow:0 18px 40px rgba(34,38,43,.18)}
+
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px 72px}
+
+  /* ── 四格重點 ── */
+  .facts{margin-top:-8px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--rule);position:relative;z-index:2}
+  .facts > div{padding:20px 18px}
+  .facts > div + div{border-left:1px solid var(--rule)}
+  .k{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--accent);margin-bottom:8px}
+  .v{font-size:15px;line-height:1.75}
+  .v b{font-weight:600}
+  .v .sub{display:block;font-size:13px;color:var(--mid);margin-top:4px}
+
+  /* ── 行動區 ── */
+  .acts{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-block;padding:14px 26px;font-size:15px;letter-spacing:.12em;text-decoration:none;font-family:var(--sans)}
+  .btn.primary{background:var(--cta-bg);color:var(--cta-ink);font-weight:600}
+  .btn.primary:hover{background:#3A3F46}
+  .btn.ghost{border:1px solid var(--accent);color:var(--accent)}
+  .btn.ghost:hover{background:var(--accent);color:#fff}
+  .actnote{color:var(--mid);font-size:13px;margin-top:12px}
+  .actnote b{color:var(--ember);font-weight:600}
+
+  /* ── 節 ── */
+  section{margin-top:64px}
+  .sechead{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:24px}
+  .sechead h2{font-family:var(--sans);font-size:22px;letter-spacing:.18em;font-weight:600}
+  .sechead .en{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.34em;color:var(--dim)}
+  .lead{color:var(--mid);font-size:14.5px;margin-bottom:18px}
+
+  /* 邀請函 */
+  .letter{background:var(--card);border:1px solid var(--rule);padding:34px 40px}
+  .letter p{margin-top:14px;text-align:justify}
+  .letter p:first-child{margin-top:0}
+  .letter .sign{margin-top:26px;text-align:right;font-family:var(--sans);font-size:14px;letter-spacing:.1em;color:var(--mid);line-height:1.8}
+  .letter .sign b{display:block;font-size:20px;color:var(--ink);letter-spacing:.3em;font-family:var(--serif);font-weight:600;margin-top:4px}
+  .letter .note{margin-top:22px;padding:12px 16px;background:#FBE9E2;border-left:3px solid var(--ember);font-size:14px;line-height:1.8}
+
+  /* 流程 */
+  .timeline{background:var(--card);border:1px solid var(--rule)}
+  .tl{display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--rule)}
+  .tl:first-child{border-top:0}
+  .tl .t{font-family:"Helvetica Neue",Arial,sans-serif;font-size:17px;letter-spacing:.06em;color:var(--accent);padding:18px 0 18px 22px;font-weight:600}
+  .tl .w{padding:18px 22px 18px 0}
+  .tl .w .n{font-family:var(--sans);font-size:16px;letter-spacing:.1em;font-weight:600}
+  .tl .w .d{font-size:14px;color:var(--mid);margin-top:4px}
+  .tl.award .n a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--accent)}
+
+  /* 獎項介紹 */
+  .award{background:var(--card);border:1px solid var(--rule);padding:28px 32px}
+  .award + .award{margin-top:20px}
+  .award h3{font-family:var(--sans);font-size:19px;letter-spacing:.14em;font-weight:600}
+  .award .tag{display:inline-block;font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:#fff;background:var(--accent);padding:3px 10px;margin-bottom:12px}
+  .award p{margin-top:12px;font-size:15px;color:var(--mid);text-align:justify}
+  .award .more{margin-top:14px;font-family:var(--sans);font-size:13.5px;letter-spacing:.06em}
+  .award .more a{margin-right:18px}
+  .winners{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+  .wg{padding:14px 0;border-top:1px solid var(--rule)}
+  .wg .gn{font-family:var(--sans);font-size:14px;letter-spacing:.14em;font-weight:600;color:var(--ember)}
+  .wg .gn small{color:var(--dim);font-weight:400;letter-spacing:.08em;margin-left:8px}
+  .wg ul{list-style:none;margin-top:6px}
+  .wg li{font-size:14.5px;line-height:1.75;padding-left:1em;text-indent:-1em}
+  .wg li span{color:var(--mid);font-size:13px}
+  .finalists{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .fin{border:1px solid var(--rule);padding:16px 18px;background:#fff}
+  .fin .ft{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.08em}
+  .fin .fa{font-size:13.5px;color:var(--mid);margin-top:2px}
+  .finnote{margin-top:10px;font-size:12.5px;color:var(--dim)}
+
+  /* 出席作家（預留） */
+  .authors{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .au{background:var(--card);border:1px solid var(--rule);padding:18px}
+  .au .an{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.1em}
+  .au .aw{font-size:13.5px;color:var(--mid);margin-top:6px;line-height:1.7}
+  .placeholder{background:var(--card);border:1px dashed var(--sky-deep);padding:28px;text-align:center;color:var(--mid);font-family:var(--sans);font-size:14px;letter-spacing:.08em}
+
+  /* 新書 */
+  .books{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .bk{background:var(--card);border:1px solid var(--rule);padding:18px}
+  .bk img{width:100%;height:auto;aspect-ratio:1/1.42;object-fit:cover;box-shadow:0 8px 20px rgba(34,38,43,.14)}
+  .bk .bt{font-family:var(--sans);font-size:15.5px;font-weight:600;letter-spacing:.06em;margin-top:14px}
+  .bk .bs{font-size:13px;color:var(--mid);margin-top:2px}
+
+  /* 交通 */
+  .venue{display:grid;grid-template-columns:1fr;gap:20px}
+  .venue .box{background:var(--card);border:1px solid var(--rule);padding:22px 26px}
+  .venue .box p{font-size:14.5px;color:var(--mid);margin-top:6px}
+  .venue .box b{font-family:var(--sans);font-weight:600;color:var(--ink);letter-spacing:.06em}
+
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--sans);font-size:12.5px;letter-spacing:.08em;color:var(--dim)}
+  footer a{text-decoration:none}
+
+  @media (max-width:880px){
+    .heroinner{grid-template-columns:1fr;gap:12px;padding-top:32px}
+    .herotext{padding-bottom:8px}
+    h1{font-size:46px}
+    .heroart{max-width:420px;margin:0 auto}
+    .facts{grid-template-columns:1fr 1fr}
+    .facts > div:nth-child(3){border-left:0}
+    .facts > div:nth-child(n+3){border-top:1px solid var(--rule)}
+    .winners,.venue{grid-template-columns:1fr}
+    .finalists{grid-template-columns:1fr}
+    .authors{grid-template-columns:1fr 1fr}
+    .books{grid-template-columns:repeat(3,1fr);gap:12px}
+    .letter{padding:24px 20px}
+    .tl{grid-template-columns:72px 1fr}
+    .tl .t{padding-left:14px;font-size:15px}
+  }
+  @media (max-width:520px){
+    .authors{grid-template-columns:1fr}
+    .books{grid-template-columns:1fr 1fr}
+    .bk:last-child{grid-column:span 2;max-width:50%;margin:0 auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="heroinner">
+    <div class="herotext">
+      <div class="brand">台灣犯罪作家聯會 × 幻華創造</div>
+      <div class="year">2026</div>
+      <h1>詭祕日</h1>
+      <div class="latin">CRIME WRITERS OF TAIWAN ANNUAL DAY</div>
+      <p class="slogan">台灣犯罪文學界的年度盛事<small>在廣袤的星河中，成為屬於自己最耀眼的光芒</small></p>
+    </div>
+    <div class="heroart"><img src="img/hero.jpg" alt="2026 詭祕日主視覺"></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="facts">
+    <div><div class="k">日期</div><div class="v"><b>2026 年 10 月 18 日</b><span class="sub">星期日</span></div></div>
+    <div><div class="k">時間</div><div class="v"><b>14:30 – 17:00</b><span class="sub">14:00 開放入場</span></div></div>
+    <div><div class="k">地點</div><div class="v"><b>紀州庵文學森林</b><span class="sub">2 樓多功能空間・臺北市中正區同安街 107 號 2 樓</span></div></div>
+    <div><div class="k">回覆期限</div><div class="v"><b>2026 年 9 月 30 日</b><span class="sub">請回覆出席意願與參加人數</span></div></div>
+  </div>
+
+  <div class="acts">
+    <a class="btn primary" href="https://www.the-cwt.com/event-details/2026-gui-mi-ri" target="_top">回覆出席</a>
+    <a class="btn ghost" href="2026詭祕日_邀請卡.pdf" target="_blank" rel="noopener">下載邀請卡 PDF</a>
+  </div>
+  <p class="actnote">敬請於 <b>2026 年 9 月 30 日</b>前回覆出席意願及參加人數，以利後續相關事務安排。</p>
+
+  <!-- ── 邀請函 ── -->
+  <section id="letter">
+    <div class="sechead"><h2>邀請函</h2><span class="en">INVITATION</span></div>
+    <div class="letter">
+      <p>各位好朋友，您好：</p>
+      <p>2026 年台灣犯罪作家聯會持續深耕本土、接軌國際，會員展現出蓬勃的創作力與行動力，《推理》雜誌復刊至今已跨過 300 期的里程碑，以月刊形式成為本土創作的發表重鎮、「林佛兒獎」的短篇創作新人獎復辦邁入第五屆、以出版獎勵為主的「完美犯罪讀這本」也連續五年辦理。不久的將來也將開創「中篇懸疑創作小說獎」、「CWT 台港犯罪社會書獎」，展現出不同以往的全新面貌。</p>
+      <p>「詭祕日」不僅是年度獎項的榮耀時刻與新刊亮相的舞台，更是我們一整年努力成果的總匯與分享。</p>
+      <p>誠摯邀請您出席 2026 詭祕日，親臨現場共襄盛舉，一同感受台灣犯罪文學的活躍氣息，見證屬於我們的故事與未來。</p>
+      <div class="sign">台灣犯罪作家聯會<br>執行主席 &amp; 理事長<b>既晴</b></div>
+      <div class="note">※ 敬請於 2026 年 9 月 30 日前賜復出席意願及參加人數，以利敝會後續相關事務安排。</div>
+    </div>
+  </section>
+
+  <!-- ── 活動流程 ── -->
+  <section id="schedule">
+    <div class="sechead"><h2>活動流程</h2><span class="en">PROGRAMME</span></div>
+    <div class="timeline">
+      <div class="tl"><div class="t">14:30</div><div class="w"><div class="n">活動開始</div><div class="d">14:00 開放入場</div></div></div>
+      <div class="tl"><div class="t">14:40</div><div class="w"><div class="n">2026 犯聯作家創作巡禮</div><div class="d">出席作家與本年度作品，見下方「出席作家」</div></div></div>
+      <div class="tl"><div class="t">15:00</div><div class="w"><div class="n">偵探的步伐——漫談寫作習慣</div><div class="d">座談</div></div></div>
+      <div class="tl award"><div class="t">15:30</div><div class="w"><div class="n"><a href="#foerlin">「第九屆林佛兒獎」頒獎典禮</a></div><div class="d">短篇犯罪推理小說新人獎・決審三篇於現場揭曉</div></div></div>
+      <div class="tl award"><div class="t">16:00</div><div class="w"><div class="n"><a href="#pca">「2026 完美犯罪讀這本！」頒獎典禮</a></div><div class="d">年度華文懸疑推理犯罪出版品評選・五類十件得獎作品</div></div></div>
+      <div class="tl"><div class="t">16:30</div><div class="w"><div class="n">簽書與現場交流</div><div class="d">現場可購買《推理》306、307 期與《地下情人》</div></div></div>
+    </div>
+  </section>
+
+  <!-- ── 兩項獎 ── -->
+  <section id="awards">
+    <div class="sechead"><h2>年度獎項</h2><span class="en">AWARDS</span></div>
+
+    <div class="award" id="foerlin">
+      <span class="tag">15:30 頒獎</span>
+      <h3>第九屆林佛兒獎</h3>
+      <p>台灣犯罪作家聯會主辦的短篇犯罪推理小說新人獎，復辦後邁入第五屆。本屆經初審、複審兩輪不重複的評審審查，選出進入決審的作品；決審會議於 2026 年 8 月 2 日舉行，由洪敍銘主席、林暢、既晴、盛浩偉、戴伸峰、簡君玲五位委員兩輪投票評定。五項評選指標歷屆固定：在地性 30%、推理性 30%、可讀性 20%、社會性 10%、文學性 10%。得獎名次於詭祕日現場揭曉，完整決審紀錄刊於 10 月 19 日出刊的《推理》第 306 期。</p>
+      <div class="finalists">
+        <div class="fin"><div class="ft">扎滿圖釘的屍體</div><div class="fa">郭耘</div></div>
+        <div class="fin"><div class="ft">湯底</div><div class="fa">莫三</div></div>
+        <div class="fin"><div class="ft">外送員的幸運日</div><div class="fa">猶安</div></div>
+      </div>
+      <div class="finnote">※ 決審三篇，亂數排序，無任何排名或其他意義。三篇將分別收錄《推理》306、307、308 期。</div>
+      <div class="more"><a href="../foerlin9/" target="_top">決審作品與評選判準</a><a href="https://www.the-cwt.com/foerlin" target="_top">林佛兒獎歷屆</a></div>
+    </div>
+
+    <div class="award" id="pca">
+      <span class="tag">16:00 頒獎</span>
+      <h3>2026 完美犯罪讀這本！</h3>
+      <p>以出版獎勵為主的年度華文懸疑推理犯罪出版品評選，2022 年起連續五年辦理。本屆由近五十位來自多個華語地區的出版人、編輯人、自媒體人、書評人、作者與資深讀者組成評審團，耗時三個多月精讀涵蓋懸疑、推理、驚悚及犯罪文學的出版品，選出金、火、木、土、水五類得獎作品。</p>
+      <div class="winners">
+        <div class="wg"><div class="gn">金獎<small>年度最佳長篇小說・四名</small></div><ul>
+          <li>《她被殺死的那一天》<span>Shika 西卡・台灣角川</span></li>
+          <li>《樂園》<span>款款・采藝</span></li>
+          <li>《幻象消失之夜》<span>A.Z.・幻華創造</span></li>
+          <li>《童探 Bodacious!：極夜之晝》<span>提子墨・台灣角川</span></li></ul></div>
+        <div class="wg"><div class="gn">火獎<small>年度最佳短篇小說・兩名</small></div><ul>
+          <li>〈繭居心鎖〉<span>海蒂・收錄於《時光洗衣舖 2：今日失物招領中》・皇冠文化</span></li>
+          <li>〈人柱〉<span>宴平樂・收錄於《詭軼紀事‧拾（完結篇）：噬魂詭書靈》・奇幻基地</span></li></ul></div>
+        <div class="wg"><div class="gn">木獎<small>年度最佳海外華文小說・一名</small></div><ul>
+          <li>《落水者》<span>指紋、施一凡・馬可孛羅</span></li></ul></div>
+        <div class="wg"><div class="gn">土獎<small>年度最佳非小說・一名</small></div><ul>
+          <li>《暗網惡帝》<span>尼克．比爾頓著、傅文心譯・高寶書版</span></li></ul></div>
+        <div class="wg"><div class="gn">水獎<small>年度最佳翻譯小說・兩名</small></div><ul>
+          <li>《絕叫》<span>葉真中顯著、林佩瑾譯・圓神</span></li>
+          <li>《贖罪奏鳴曲》<span>中山七里著、李彥樺譯・瑞昇文化</span></li></ul></div>
+      </div>
+      <div class="more"><a href="https://www.the-cwt.com/2026pca-winners" target="_top">完整評選結果與評審推薦語</a><a href="https://www.the-cwt.com/perfectcrime" target="_top">完美犯罪讀這本歷屆</a></div>
+    </div>
+  </section>
+
+  <!-- ── 出席作家（預留；名單確定後填 AUTHORS 陣列即可）── -->
+  <section id="authors">
+    <div class="sechead"><h2>出席作家</h2><span class="en">AUTHORS</span></div>
+    <p class="lead">14:40「2026 犯聯作家創作巡禮」出席作家與本年度作品。</p>
+    <div class="authors" id="authorGrid"></div>
+    <div class="placeholder" id="authorEmpty">出席作家名單整理中，確定後於本頁更新。</div>
+  </section>
+
+  <!-- ── 新書首日發行 ── -->
+  <section id="books">
+    <div class="sechead"><h2>新書首日發行</h2><span class="en">NEW RELEASES</span></div>
+    <p class="lead">三本新書於詭祕日當天首日發行，現場可購買。</p>
+    <div class="books">
+      <div class="bk"><img src="img/306.jpg" alt="推理 306 期：青"><div class="bt">《推理》306 期：青</div><div class="bs">諾貝爾文學獎特輯</div></div>
+      <div class="bk"><img src="img/307.jpg" alt="推理 307 期：鏈"><div class="bt">《推理》307 期：鏈</div><div class="bs">金融犯罪事件</div></div>
+      <div class="bk"><img src="img/underground-lover.jpg" alt="地下情人"><div class="bt">《地下情人》</div><div class="bs">陳卓威・幻華創造</div></div>
+    </div>
+  </section>
+
+  <!-- ── 交通 ── -->
+  <section id="venue">
+    <div class="sechead"><h2>會場</h2><span class="en">VENUE</span></div>
+    <div class="venue">
+      <div class="box">
+        <b>紀州庵文學森林・2 樓多功能空間</b>
+        <p>臺北市中正區同安街 107 號 2 樓</p>
+        <p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&query=%E7%B4%80%E5%B7%9E%E5%BA%B5%E6%96%87%E5%AD%B8%E6%A3%AE%E6%9E%97" target="_blank" rel="noopener">在 Google 地圖開啟</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>主辦｜台灣犯罪作家聯會・幻華創造</span>
+    <span><a href="https://www.the-cwt.com/" target="_top">台灣犯罪作家聯會官網</a></span>
+  </footer>
+</div>
+
+<script>
+  /* 出席作家名單：確定後把資料填進這個陣列，畫面自動出卡片。
+     每筆 {name:"作家", works:["書名","書名"]}，works 可空。 */
+  var AUTHORS = [];
+  (function(){
+    var g=document.getElementById('authorGrid'), e=document.getElementById('authorEmpty');
+    if(!AUTHORS.length){g.style.display='none';return;}
+    e.style.display='none';
+    g.innerHTML=AUTHORS.map(function(a){
+      return '<div class="au"><div class="an">'+a.name+'</div><div class="aw">'+(a.works||[]).map(function(w){return '《'+w+'》';}).join('　')+'</div></div>';
+    }).join('');
+  })();
+</script>
+</body>
+</html>
