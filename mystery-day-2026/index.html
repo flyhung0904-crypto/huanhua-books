@@ -88,7 +88,7 @@
   .tl .w{padding:18px 22px 18px 0}
   .tl .w .n{font-family:var(--sans);font-size:16px;letter-spacing:.1em;font-weight:600}
   .tl .w .d{font-size:14px;color:var(--mid);margin-top:4px}
-  .tl.award .n a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--accent)}
+  .tl.link .n a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--accent)}
 
   /* 獎項介紹 */
   .award{background:var(--card);border:1px solid var(--rule);padding:28px 32px}
@@ -112,11 +112,11 @@
   .finnote{margin-top:10px;font-size:12.5px;color:var(--dim)}
 
   /* 出席作家（預留） */
-  .authors{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .au{background:var(--card);border:1px solid var(--rule);padding:18px}
+  .authors{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .au{background:#fff;border:1px solid var(--rule);padding:16px 18px}
   .au .an{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.1em}
   .au .aw{font-size:13.5px;color:var(--mid);margin-top:6px;line-height:1.7}
-  .placeholder{background:var(--card);border:1px dashed var(--sky-deep);padding:28px;text-align:center;color:var(--mid);font-family:var(--sans);font-size:14px;letter-spacing:.08em}
+  .placeholder{margin-top:18px;background:#fff;border:1px dashed var(--sky-deep);padding:28px;text-align:center;color:var(--mid);font-family:var(--sans);font-size:14px;letter-spacing:.08em}
 
   /* 新書 */
   .books{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -205,20 +205,34 @@
     <div class="sechead"><h2>活動流程</h2><span class="en">PROGRAMME</span></div>
     <div class="timeline">
       <div class="tl"><div class="t">14:30</div><div class="w"><div class="n">活動開始</div><div class="d">14:00 開放入場</div></div></div>
-      <div class="tl"><div class="t">14:40</div><div class="w"><div class="n">2026 犯聯作家創作巡禮</div><div class="d">出席作家與本年度作品，見下方「出席作家」</div></div></div>
-      <div class="tl"><div class="t">15:00</div><div class="w"><div class="n">偵探的步伐——漫談寫作習慣</div><div class="d">座談</div></div></div>
-      <div class="tl award"><div class="t">15:30</div><div class="w"><div class="n"><a href="#foerlin">「第九屆林佛兒獎」頒獎典禮</a></div><div class="d">短篇犯罪推理小說新人獎・決審三篇於現場揭曉</div></div></div>
-      <div class="tl award"><div class="t">16:00</div><div class="w"><div class="n"><a href="#pca">「2026 完美犯罪讀這本！」頒獎典禮</a></div><div class="d">年度華文懸疑推理犯罪出版品評選・五類十件得獎作品</div></div></div>
+      <div class="tl link"><div class="t">14:40</div><div class="w"><div class="n"><a href="#parade">2026 犯聯作家創作巡禮</a></div><div class="d">出席作家與本年度作品</div></div></div>
+      <div class="tl link"><div class="t">15:00</div><div class="w"><div class="n"><a href="#talk">偵探的步伐——漫談寫作習慣</a></div><div class="d">座談</div></div></div>
+      <div class="tl link"><div class="t">15:30</div><div class="w"><div class="n"><a href="#foerlin">「第九屆林佛兒獎」頒獎典禮</a></div><div class="d">短篇犯罪推理小說新人獎・決審三篇於現場揭曉</div></div></div>
+      <div class="tl link"><div class="t">16:00</div><div class="w"><div class="n"><a href="#pca">「2026 完美犯罪讀這本！」頒獎典禮</a></div><div class="d">年度華文懸疑推理犯罪出版品評選・五類十件得獎作品</div></div></div>
       <div class="tl"><div class="t">16:30</div><div class="w"><div class="n">簽書與現場交流</div><div class="d">現場可購買《推理》306、307 期與《地下情人》</div></div></div>
     </div>
   </section>
 
   <!-- ── 兩項獎 ── -->
-  <section id="awards">
-    <div class="sechead"><h2>年度獎項</h2><span class="en">AWARDS</span></div>
+  <section id="programme">
+    <div class="sechead"><h2>活動內容</h2><span class="en">PROGRAMME DETAILS</span></div>
+
+    <div class="award" id="parade">
+      <span class="tag">14:40</span>
+      <h3>2026 犯聯作家創作巡禮</h3>
+      <p>出席作家與本年度作品，依現場出席名單更新。</p>
+      <div class="authors" id="authorGrid"></div>
+      <div class="placeholder" id="authorEmpty">出席作家名單整理中，確定後於本頁更新。</div>
+    </div>
+
+    <div class="award" id="talk">
+      <span class="tag">15:00</span>
+      <h3>偵探的步伐——漫談寫作習慣</h3>
+      <p>座談。與談人與內容確定後於本頁更新。</p>
+    </div>
 
     <div class="award" id="foerlin">
-      <span class="tag">15:30 頒獎</span>
+      <span class="tag">15:30</span>
       <h3>第九屆林佛兒獎</h3>
       <p>台灣犯罪作家聯會主辦的短篇犯罪推理小說新人獎，復辦後邁入第五屆。本屆經初審、複審兩輪不重複的評審審查，選出進入決審的作品；決審會議於 2026 年 8 月 2 日舉行，由洪敍銘主席、林暢、既晴、盛浩偉、戴伸峰、簡君玲五位委員兩輪投票評定。五項評選指標歷屆固定：在地性 30%、推理性 30%、可讀性 20%、社會性 10%、文學性 10%。得獎名次於詭祕日現場揭曉，完整決審紀錄刊於 10 月 19 日出刊的《推理》第 306 期。</p>
       <div class="finalists">
@@ -231,7 +245,7 @@
     </div>
 
     <div class="award" id="pca">
-      <span class="tag">16:00 頒獎</span>
+      <span class="tag">16:00</span>
       <h3>2026 完美犯罪讀這本！</h3>
       <p>以出版獎勵為主的年度華文懸疑推理犯罪出版品評選，2022 年起連續五年辦理。本屆由近五十位來自多個華語地區的出版人、編輯人、自媒體人、書評人、作者與資深讀者組成評審團，耗時三個多月精讀涵蓋懸疑、推理、驚悚及犯罪文學的出版品，選出金、火、木、土、水五類得獎作品。</p>
       <div class="winners">
@@ -255,13 +269,6 @@
     </div>
   </section>
 
-  <!-- ── 出席作家（預留；名單確定後填 AUTHORS 陣列即可）── -->
-  <section id="authors">
-    <div class="sechead"><h2>出席作家</h2><span class="en">AUTHORS</span></div>
-    <p class="lead">14:40「2026 犯聯作家創作巡禮」出席作家與本年度作品。</p>
-    <div class="authors" id="authorGrid"></div>
-    <div class="placeholder" id="authorEmpty">出席作家名單整理中，確定後於本頁更新。</div>
-  </section>
 
   <!-- ── 新書首日發行 ── -->
   <section id="books">
