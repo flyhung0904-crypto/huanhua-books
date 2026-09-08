@@ -35,7 +35,7 @@
   .stage{position:relative;background:linear-gradient(180deg,#7FDCD9 0%,#BFEDE8 45%,#E9EAD9 78%,var(--ground) 100%);overflow:hidden}
   .stage::before{content:"";position:absolute;inset:0;background:url(img/sky.jpg) center top/cover;opacity:.35;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 85%);mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 85%)}
   .stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,rgba(244,241,234,0),var(--ground))}
-  .stagein{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:40px 24px 24px;display:grid;grid-template-columns:400px 1fr;gap:24px}
+  .stagein{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:40px 24px 44px;display:grid;grid-template-columns:440px 1fr;gap:14px}
 
   .brand{font-family:var(--sans);font-size:11px;letter-spacing:.42em;color:var(--mid)}
   .yr{font-family:var(--mono);font-size:13px;letter-spacing:.5em;color:var(--teal);margin-top:20px}
@@ -48,48 +48,58 @@
   .slogan{font-family:var(--sans);font-size:15px;letter-spacing:.14em;line-height:1.9;margin-top:22px;padding-left:12px;border-left:3px solid var(--ember)}
   .slogan small{display:block;font-size:12.5px;color:var(--mid);letter-spacing:.08em}
 
-  /* 入場券：資訊單元的容器；兩側圓孔＝撕票口 */
-  .ticket{margin-top:28px;background:var(--ink);color:var(--ground);position:relative;padding:18px 20px 16px}
-  .ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:#D9EEE6;transform:translateY(-50%)}
-  .ticket::before{left:-8px}.ticket::after{right:-8px}
-  .ticket .th{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed rgba(244,241,234,.35);padding-bottom:10px;margin-bottom:12px}
-  .ticket .th b{font-family:var(--sans);font-size:12px;letter-spacing:.3em;font-weight:600}
-  .ticket .th span{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--sky-deep)}
-  .ticket dl{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
-  .ticket dt{font-family:var(--sans);font-size:10px;letter-spacing:.26em;color:var(--sky-deep)}
-  .ticket dd{font-size:14.5px;line-height:1.5;margin-top:2px}
-  .ticket dd small{display:block;font-size:11.5px;color:rgba(244,241,234,.7)}
-  .ticket .rsvp{grid-column:1/-1;margin-top:6px;padding-top:12px;border-top:1px dashed rgba(244,241,234,.35);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  .btn{display:inline-block;padding:10px 18px;font-family:var(--sans);font-size:13.5px;letter-spacing:.12em;text-decoration:none;font-weight:600}
-  .btn.ember{background:var(--ember);color:#fff}
+  /* 登機證：主票＋撕票存根，中間虛線＝撕線 */
+  .pass{margin-top:26px;display:grid;grid-template-columns:minmax(0,1fr) 108px;background:var(--paper);color:var(--ink);box-shadow:0 10px 26px rgba(31,36,41,.16);border-radius:6px;overflow:hidden;position:relative}
+  .pass::before,.pass::after{content:"";position:absolute;right:108px;width:16px;height:16px;border-radius:50%;background:#BFE8E4;z-index:2}
+  .pass::before{top:-8px}.pass::after{bottom:-8px}
+  .pass .main{min-width:0;padding:0 12px 14px 16px;border-right:2px dashed var(--rule)}
+  .pass .ph{display:flex;justify-content:space-between;align-items:center;margin:0 -16px 12px -18px;padding:8px 18px;background:var(--ink);color:var(--ground)}
+  .pass .ph .air{font-family:var(--mono);font-size:10.5px;letter-spacing:.32em}
+  .pass .ph .cls{font-family:var(--sans);font-size:11px;letter-spacing:.3em;color:var(--ember-2)}
+  .pass .route{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  .pass .route small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.3em;color:var(--dim)}
+  .pass .route b{font-family:var(--sans);font-size:14px;letter-spacing:.04em;font-weight:600;line-height:1.3;white-space:nowrap}
+  .pass .route .arrow{font-family:var(--mono);font-size:18px;color:var(--ember);padding-bottom:2px}
+  .pass .grid{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:8px 6px;margin-top:10px}
+  .pass .grid small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.08em;color:var(--dim);white-space:nowrap}
+  .pass .grid b{display:block;white-space:nowrap;font-family:var(--mono);font-size:15.5px;font-weight:600;letter-spacing:.02em;line-height:1.2;margin-top:2px}
+  .pass .grid b em{font-style:normal;font-size:10px;letter-spacing:.2em;color:var(--ember);margin-left:2px}
+  .pass .grid .wide{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:8px}
+  .pass .grid .wide b{font-family:var(--serif);font-size:12px;font-weight:400;color:var(--mid);line-height:1.5}
+  .pass .stub{min-width:0;padding:0 10px 14px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .pass .stub .ph{margin:0 -12px 12px;justify-content:center;width:calc(100% + 24px)}
+  .pass .stub small{font-family:var(--mono);font-size:9px;letter-spacing:.26em;color:var(--dim)}
+  .pass .stub > b{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--ember);line-height:1.1;margin:2px 0 10px}
+  .btn{display:inline-block;padding:9px 14px;font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-decoration:none;font-weight:600}
+  .btn.ember{background:var(--ember);color:#fff;width:100%}
   .btn.ember:hover{background:#C04E2A}
-  .btn.line{border:1px solid rgba(244,241,234,.55);color:var(--ground)}
-  .btn.line:hover{border-color:#fff}
-  .ticket .due{font-size:11.5px;color:var(--ember-2);flex-basis:100%}
+  .pass .lnk{display:block;margin-top:8px;font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--teal)}
+  .pass .bar{margin-top:auto;padding-top:12px;width:100%;height:34px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 13px);background-clip:content-box;opacity:.85}
 
+  .logos{margin-top:16px;display:flex;align-items:center;gap:22px;opacity:.72}
+  .logos img{height:28px;width:auto}
   /* 塔＋樓層線＋樓層牌 */
-  .tower{position:relative;height:700px}
+  .tower{position:relative;height:640px}
   .tower img.t{position:absolute;left:0;top:0;height:100%;width:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 94%,transparent 100%);mask-composite:intersect}
-  .floor{position:absolute;left:300px;right:0;transform:translateY(-50%);display:flex;align-items:center}
-  .floor .ln{flex:0 0 40px;height:0;border-top:1.5px dashed var(--ember);position:relative}
-  .floor .ln::before{content:attr(data-n);position:absolute;left:-11px;top:-11px;width:22px;height:22px;border-radius:50%;background:var(--ember);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(255,255,255,.7)}
-  .plate{flex:1;display:flex;text-decoration:none;color:inherit;align-items:stretch;background:var(--paper);border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule);text-align:left;transition:transform .15s,box-shadow .15s;width:100%}
+  .leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .leaders line{stroke:var(--ember);stroke-width:1.5;stroke-dasharray:4 3}
+  .dot{position:absolute;left:262px;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--ember);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+  .dot::before{content:attr(data-n)}
+  .tower > .plate{position:absolute;left:300px;right:0;height:60px}
+  .plate{display:flex;text-decoration:none;color:inherit;align-items:stretch;background:var(--paper);border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule);text-align:left;transition:transform .15s,box-shadow .15s}
   .plate:hover{transform:translateX(3px);box-shadow:0 2px 0 var(--teal)}
   .plate.on{border-color:var(--ink);box-shadow:0 2px 0 var(--ink);transform:translateX(3px)}
-  .plate .no{flex:0 0 46px;background:var(--ink);color:var(--ground);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);line-height:1.1}
+  .plate .no{flex:0 0 40px;background:var(--ink);color:var(--ground);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);line-height:1.1}
   .plate .no b{font-size:17px;font-weight:600}
   .plate .no small{font-size:9px;letter-spacing:.14em;color:var(--sky-deep)}
   .plate.on .no{background:var(--ember)}
-  .plate .tx{padding:7px 10px;flex:1;min-width:0}
+  .plate .tx{padding:0 10px;flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
   .plate .tm{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--teal);font-weight:600}
-  .plate .nm{font-family:var(--sans);font-size:13.5px;font-weight:600;letter-spacing:.04em;line-height:1.35}
-  .plate .nm.long{font-size:12.5px}
-  .plate .more{flex:0 0 22px;display:flex;align-items:center;justify-content:center;color:var(--dim);font-family:var(--mono);font-size:14px}
+  .plate .nm{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.02em;line-height:1.3}
+    .plate .more{flex:0 0 18px;display:flex;align-items:center;justify-content:center;color:var(--dim);font-family:var(--mono);font-size:14px}
   .plate.on .more{color:var(--ember)}
-  .plate.leaf{pointer-events:none}
-  .plate.leaf .more{visibility:hidden}
-  .floorlist{display:none}
-  .hint{position:absolute;left:300px;bottom:-6px;font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--mid)}
+    .floorlist{display:none}
+  .hint{position:absolute;right:0;bottom:-30px;font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--mid)}
   .hint::before{content:"↑ ";color:var(--ember)}
 
   /* ════════ 第二幕：六層樓區塊 ════════ */
@@ -110,11 +120,12 @@
   .fbody .more{margin-top:16px;font-family:var(--sans);font-size:13px;letter-spacing:.08em}
   .fbody .more a{display:inline-block;border:1px solid var(--teal);padding:7px 14px;text-decoration:none;margin-right:10px}
   .fbody .more a:hover{background:var(--teal);color:#fff}
-  #f1 .fbody,#f6 .fbody{padding:12px 22px 14px}
+  #f1 .fbody{padding:12px 22px 14px}
   #f1 .fno,#f6 .fno{background:var(--mid)}
 
   /* 與談人 */
-  .people{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  .talk{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+  .people{display:flex;flex-direction:column;gap:10px;margin-top:8px}
   .pp{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--rule);padding:12px 18px 12px 12px}
   .pp .av{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--ground);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;font-weight:600}
   .pp b{font-family:var(--sans);font-size:16px;letter-spacing:.14em;font-weight:600;display:block}
@@ -132,15 +143,33 @@
 
   /* 獎牌列（完美犯罪五獎） */
   .medals{border-top:1px solid var(--rule)}
-  .md{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--rule);padding:10px 0}
-  .md .g{display:flex;align-items:flex-start;gap:8px;font-family:var(--sans);font-size:13.5px;font-weight:600;letter-spacing:.1em}
-  .md .g i{flex:0 0 14px;height:14px;margin-top:5px;border:1px solid var(--ink)}
+  .md{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--rule);padding:10px 0;align-items:center}
+  .md .g{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13.5px;font-weight:600;letter-spacing:.1em}
+  .md .g i{flex:0 0 14px;height:14px;border:1px solid var(--ink)}
   .md .g small{display:block;font-weight:400;font-size:10.5px;color:var(--dim);letter-spacing:.06em}
   .md ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 18px}
   .md li{font-size:14px;line-height:1.6}
   .md li span{color:var(--mid);font-size:12.5px}
   .g-gold i{background:var(--gold)}.g-fire i{background:var(--ember)}.g-tree i{background:var(--mint)}.g-earth i{background:var(--earth)}.g-water i{background:var(--sky-deep)}
 
+  /* 3F 活動介紹欄位 */
+  .intro{border:1px solid var(--rule);background:var(--white);padding:14px 16px;position:relative;min-height:100%;margin-top:8px}
+  .intro .lbl{position:absolute;left:12px;top:-9px;background:var(--white);padding:0 6px;font-family:var(--sans);font-size:10.5px;letter-spacing:.24em;color:var(--teal)}
+  .intro p.ph{color:var(--dim);font-family:var(--sans);font-size:13px;letter-spacing:.06em}
+  .lbl2{margin-top:0;font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--dim)}
+  /* 2F 出席作家：圓形大頭照 */
+  .faces{display:grid;grid-template-columns:repeat(8,1fr);gap:14px 10px}
+  .face{text-align:center}
+  .face .ph{width:64px;height:64px;border-radius:50%;margin:0 auto;overflow:hidden;background:var(--sky-deep);border:3px solid var(--white);box-shadow:0 0 0 1px var(--rule),0 6px 14px rgba(31,36,41,.14);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:22px;font-weight:600}
+  .face .ph img{width:100%;height:100%;object-fit:cover}
+  .face .ph.c2{background:var(--ember)}.face .ph.c3{background:var(--teal)}.face .ph.c4{background:var(--gold)}.face .ph.c5{background:var(--earth)}.face .ph.c6{background:var(--ink)}
+  .face b{display:block;margin-top:6px;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;font-weight:600}
+  /* 6F 出席作家作品 */
+  .works{display:grid;grid-template-columns:repeat(8,1fr);gap:12px 10px;margin-top:12px}
+  .wk img{width:100%;aspect-ratio:1/1.42;object-fit:cover;box-shadow:0 4px 12px rgba(31,36,41,.16);background:var(--rule)}
+  .wk .no{width:100%;aspect-ratio:1/1.42;background:var(--paper);border:1px dashed var(--rule)}
+  .wk b{display:block;font-family:var(--sans);font-size:11px;line-height:1.4;margin-top:6px;letter-spacing:.02em;font-weight:600}
+  .wk small{display:block;color:var(--dim);font-size:10.5px}
   /* 出席作家（預留） */
   .authors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
   .au{background:var(--white);border:1px solid var(--rule);padding:12px 14px}
@@ -156,13 +185,10 @@
   .env .eh b{font-family:var(--sans);font-size:13px;letter-spacing:.3em;font-weight:600}
   .env .eh span{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--dim)}
   .env .lead{margin-top:12px;font-size:14.5px}
-  .env .full{display:none;margin-top:10px}
-  .env.open .full{display:block}
-  .env .full p{font-size:14px;color:var(--mid);text-align:justify;margin-top:8px}
+  .env p{font-size:14px;color:var(--mid);text-align:justify;margin-top:8px}
+  .env .lead{color:var(--ink);margin-top:12px}
   .env .sig{margin-top:14px;text-align:right;font-family:var(--sans);font-size:12px;color:var(--mid);letter-spacing:.08em;line-height:1.7}
   .env .sig b{display:block;font-family:var(--serif);font-size:18px;letter-spacing:.3em;color:var(--ink)}
-  .env .tg{margin-top:12px;font-family:var(--sans);font-size:12.5px;letter-spacing:.1em;color:var(--teal);border-bottom:1px solid var(--teal)}
-  .env.open .tg .o,.env:not(.open) .tg .c{display:none}
 
   .side{display:grid;gap:20px;align-content:start}
   .books{background:var(--paper);border:1px solid var(--rule);padding:16px 18px}
@@ -184,6 +210,15 @@
 
   /* ════════ 手機 ════════ */
   @media (max-width:880px){
+    .pass{grid-template-columns:minmax(0,1fr) 100px}
+    .pass::before,.pass::after{right:100px}
+    .pass .grid{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:start}
+    .pass .ph{padding:8px 12px}
+    .pass .ph .air{font-size:8.5px;letter-spacing:.12em;white-space:nowrap}
+    .pass .ph .cls{white-space:nowrap}
+    .pass .stub .btn.ember{white-space:nowrap;padding:9px 6px;font-size:12px;letter-spacing:.06em}
+    .logos{gap:14px}
+    .logos img{height:22px}
     .stagein{grid-template-columns:1fr;gap:18px;padding-top:28px}
     h1{font-size:56px}
     .planet{width:130px;height:130px;right:-10px;top:-20px}
@@ -191,14 +226,17 @@
     .up{display:none}
     .tower{height:auto;display:grid;grid-template-columns:150px 1fr;grid-template-rows:auto auto;gap:8px 12px;align-items:stretch}
     .tower img.t{position:static;height:auto;width:100%;grid-column:1;grid-row:1;align-self:center}
-    .floor{display:none}
+    .tower > .plate,.dot,.leaders{display:none}
     .floorlist{display:flex;flex-direction:column;justify-content:space-between;gap:6px;grid-column:2;grid-row:1;min-width:0}
-    .plate .nm{white-space:normal;font-size:13px}
+    .floorlist .plate{position:static;height:auto;min-height:56px;width:100%}
+    .plate .nm{white-space:normal}
     .hint{position:static;grid-column:1/-1;grid-row:2;margin-top:0}
     .scripts{grid-template-columns:1fr}
     .md{grid-template-columns:1fr;gap:4px}
     .md ul{grid-template-columns:1fr}
-    .authors{grid-template-columns:1fr 1fr}
+    .faces{grid-template-columns:repeat(4,1fr)}
+    .talk{grid-template-columns:1fr}
+    .works{grid-template-columns:repeat(4,1fr)}
     .row{grid-template-columns:1fr}
   }
   @media (max-width:420px){
@@ -221,36 +259,44 @@
       <div class="latin">CRIME WRITERS OF TAIWAN ANNUAL DAY</div>
       <p class="slogan">台灣犯罪文學界的年度盛事<small>在廣袤的星河中，成為屬於自己最耀眼的光芒</small></p>
 
-      <div class="ticket">
-        <div class="th"><b>入場資訊</b><span>ADMISSION</span></div>
-        <dl>
-          <div><dt>日期</dt><dd>2026.10.18<small>星期日</small></dd></div>
-          <div><dt>時間</dt><dd>14:30 – 17:00<small>14:00 開放入場</small></dd></div>
-          <div style="grid-column:1/-1"><dt>地點</dt><dd>紀州庵文學森林・2 樓多功能空間<small>臺北市中正區同安街 107 號 2 樓</small></dd></div>
-          <div class="rsvp">
-            <a class="btn ember" href="https://www.the-cwt.com/event-details/2026-gui-mi-ri" target="_top">回覆出席</a>
-            <a class="btn line" href="2026詭祕日_邀請卡.pdf" target="_blank" rel="noopener">邀請卡 PDF</a>
-            <span class="due">請於 2026 年 9 月 30 日前回覆出席意願與參加人數</span>
+      <div class="pass">
+        <div class="main">
+          <div class="ph"><span class="air">CWT ✈ BOARDING PASS</span><span class="cls">入場證</span></div>
+          <div class="route"><div><small>FROM</small><b>台灣犯罪作家聯會</b></div><div class="arrow">→</div><div><small>TO</small><b>2026 詭祕日</b></div></div>
+          <div class="grid">
+            <div><small>DATE 日期</small><b>10.18 <em>SUN</em></b></div>
+            <div><small>BOARDING 開放入場</small><b>14:00</b></div>
+            <div><small>DEPARTURE 開始</small><b>14:30</b></div>
+            <div><small>GATE 會場</small><b>紀州庵 2F</b></div>
+            <div class="wide"><small>VENUE</small><b>紀州庵文學森林・2 樓多功能空間<br>臺北市中正區同安街 107 號 2 樓</b></div>
           </div>
-        </dl>
+        </div>
+        <div class="stub">
+          <div class="ph"><span class="cls">RSVP</span></div>
+          <small>回覆期限</small><b>09.30</b>
+          <a class="btn ember" href="https://www.the-cwt.com/event-details/2026-gui-mi-ri" target="_top">回覆出席</a>
+          <a class="lnk" href="2026詭祕日_邀請卡.pdf" target="_blank" rel="noopener">邀請卡 PDF</a>
+          <div class="bar" aria-hidden="true"></div>
+        </div>
       </div>
+      <div class="logos"><img src="img/logos/cwt-wordmark.png" alt="CWT 台灣犯罪作家聯會"><img src="img/logos/cwt-emblem.png" alt="Crime Writers of Taiwan 台灣犯罪作家聯會"><img src="img/logos/huanhua.png" alt="幻華創造"></div>
     </div>
 
     <div class="tower" id="tower">
       <img class="t" src="img/tower.jpg" alt="2026 詭祕日主視覺：一座六層的塔">
-      <!-- 樓層線：由下往上＝時間往後走。top 值對到塔身各層；點樓層牌跳到下方該層區塊 -->
-      <div class="floor" style="top:88%"><span class="ln" data-n="1"></span>
-        <a class="plate" href="#f1" data-f="1"><div class="no"><b>1</b><small>F</small></div><div class="tx"><div class="tm">14:30</div><div class="nm long">活動開始・14:00 開放入場</div></div><div class="more">↓</div></a></div>
-      <div class="floor" style="top:75%"><span class="ln" data-n="2"></span>
-        <a class="plate" href="#f2" data-f="2"><div class="no"><b>2</b><small>F</small></div><div class="tx"><div class="tm">14:40</div><div class="nm">2026 犯聯作家創作巡禮</div></div><div class="more">↓</div></a></div>
-      <div class="floor" style="top:62%"><span class="ln" data-n="3"></span>
-        <a class="plate" href="#f3" data-f="3"><div class="no"><b>3</b><small>F</small></div><div class="tx"><div class="tm">15:00</div><div class="nm">偵探的步伐——漫談寫作習慣</div></div><div class="more">↓</div></a></div>
-      <div class="floor" style="top:47%"><span class="ln" data-n="4"></span>
-        <a class="plate" href="#f4" data-f="4"><div class="no"><b>4</b><small>F</small></div><div class="tx"><div class="tm">15:30</div><div class="nm">「第九屆林佛兒獎」頒獎典禮</div></div><div class="more">↓</div></a></div>
-      <div class="floor" style="top:30%"><span class="ln" data-n="5"></span>
-        <a class="plate" href="#f5" data-f="5"><div class="no"><b>5</b><small>F</small></div><div class="tx"><div class="tm">16:00</div><div class="nm long">「2026 完美犯罪讀這本！」頒獎典禮</div></div><div class="more">↓</div></a></div>
-      <div class="floor" style="top:11%"><span class="ln" data-n="6"></span>
-        <a class="plate" href="#f6" data-f="6"><div class="no"><b>6</b><small>F</small></div><div class="tx"><div class="tm">16:30</div><div class="nm">簽書與現場交流</div></div><div class="more">↓</div></a></div>
+      <svg class="leaders" aria-hidden="true"></svg>
+      <span class="dot" data-n="6" style="top:11%"></span>
+      <a class="plate" href="#f6" data-f="6" style="top:calc(6% + 0 * 16.6%)"><div class="no"><b>6</b><small>F</small></div><div class="tx"><div class="tm">16:30</div><div class="nm">簽書與現場交流</div></div><div class="more">↓</div></a>
+      <span class="dot" data-n="5" style="top:30%"></span>
+      <a class="plate" href="#f5" data-f="5" style="top:calc(6% + 1 * 16.6%)"><div class="no"><b>5</b><small>F</small></div><div class="tx"><div class="tm">16:00</div><div class="nm">「2026 完美犯罪讀這本！」頒獎典禮</div></div><div class="more">↓</div></a>
+      <span class="dot" data-n="4" style="top:47%"></span>
+      <a class="plate" href="#f4" data-f="4" style="top:calc(6% + 2 * 16.6%)"><div class="no"><b>4</b><small>F</small></div><div class="tx"><div class="tm">15:30</div><div class="nm">「第九屆林佛兒獎」頒獎典禮</div></div><div class="more">↓</div></a>
+      <span class="dot" data-n="3" style="top:62%"></span>
+      <a class="plate" href="#f3" data-f="3" style="top:calc(6% + 3 * 16.6%)"><div class="no"><b>3</b><small>F</small></div><div class="tx"><div class="tm">15:00</div><div class="nm">偵探的步伐——漫談寫作習慣</div></div><div class="more">↓</div></a>
+      <span class="dot" data-n="2" style="top:75%"></span>
+      <a class="plate" href="#f2" data-f="2" style="top:calc(6% + 4 * 16.6%)"><div class="no"><b>2</b><small>F</small></div><div class="tx"><div class="tm">14:40</div><div class="nm">2026 犯聯作家創作巡禮</div></div><div class="more">↓</div></a>
+      <span class="dot" data-n="1" style="top:88%"></span>
+      <a class="plate" href="#f1" data-f="1" style="top:calc(6% + 5 * 16.6%)"><div class="no"><b>1</b><small>F</small></div><div class="tx"><div class="tm">14:30</div><div class="nm">活動開始・14:00 開放入場</div></div><div class="more">↓</div></a>
       <div class="hint">點樓層牌看該時段內容</div>
       <div class="floorlist" id="floorlist"></div>
     </div>
@@ -270,18 +316,19 @@
     <section class="fb" id="f2">
       <div class="fh"><div class="fno"><b>2</b><small>FLOOR</small></div><div class="ft"><span class="tm">14:40</span><h2>2026 犯聯作家創作巡禮</h2></div><a class="up" href="#tower">回到塔 ↑</a></div>
       <div class="fbody">
-      <p>出席作家與本年度作品。</p>
-      <div class="authors" id="authorGrid"></div>
+      <div class="faces" id="authorGrid"></div>
       <div class="empty" id="authorEmpty">出席作家名單整理中，確定後於本頁更新。</div>
       </div>
     </section>
     <section class="fb" id="f3">
       <div class="fh"><div class="fno"><b>3</b><small>FLOOR</small></div><div class="ft"><span class="tm">15:00</span><h2>偵探的步伐——漫談寫作習慣</h2></div><a class="up" href="#tower">回到塔 ↑</a></div>
       <div class="fbody">
-      <p>與談人</p>
-      <div class="people">
+      <div class="talk">
+        <div><p class="lbl2">與談人</p><div class="people">
         <div class="pp"><div class="av">紀</div><div><b>紀蔚然</b><small>SPEAKER</small></div></div>
         <div class="pp"><div class="av">祁</div><div><b>祁立峰</b><small>SPEAKER</small></div></div>
+        </div></div>
+        <div class="intro" id="talkIntro"><span class="lbl">活動介紹</span><p class="ph">活動介紹整理中。</p></div>
       </div>
       </div>
     </section>
@@ -323,7 +370,9 @@
     <section class="fb" id="f6">
       <div class="fh"><div class="fno"><b>6</b><small>FLOOR</small></div><div class="ft"><span class="tm">16:30</span><h2>簽書與現場交流</h2></div><a class="up" href="#tower">回到塔 ↑</a></div>
       <div class="fbody">
-      <p>簽書與現場交流。現場可購買當日首日發行的《推理》306、307 期與《地下情人》。</p>
+      <p>簽書與現場交流。出席作家作品現場可購買、請作家簽名；當日首日發行的三本新書見下方「新書」。</p>
+      <div class="works" id="workGrid"></div>
+      <div class="empty" id="workEmpty">出席作家作品依出席名單更新。</div>
       </div>
     </section>
   </div>
@@ -332,14 +381,11 @@
   <div class="row">
     <div class="env" id="env">
       <div class="eh"><b>邀請函</b><span>INVITATION</span></div>
-      <p class="lead">各位好朋友，您好：「詭祕日」不僅是年度獎項的榮耀時刻與新刊亮相的舞台，更是我們一整年努力成果的總匯與分享。誠摯邀請您出席 2026 詭祕日，親臨現場共襄盛舉。</p>
-      <div class="full">
+      <p class="lead">各位好朋友，您好：</p>
         <p>2026 年台灣犯罪作家聯會持續深耕本土、接軌國際，會員展現出蓬勃的創作力與行動力，《推理》雜誌復刊至今已跨過 300 期的里程碑，以月刊形式成為本土創作的發表重鎮、「林佛兒獎」的短篇創作新人獎復辦邁入第五屆、以出版獎勵為主的「完美犯罪讀這本」也連續五年辦理。不久的將來也將開創「中篇懸疑創作小說獎」、「CWT 台港犯罪社會書獎」，展現出不同以往的全新面貌。</p>
         <p>一同感受台灣犯罪文學的活躍氣息，見證屬於我們的故事與未來。</p>
         <p>※ 敬請於 2026 年 9 月 30 日前賜復出席意願及參加人數，以利敝會後續相關事務安排。</p>
-      </div>
       <div class="sig">台灣犯罪作家聯會 執行主席 &amp; 理事長<b>既晴</b></div>
-      <button class="tg" id="envtg"><span class="c">展開全文 ＋</span><span class="o">收合 －</span></button>
     </div>
 
     <div class="side">
@@ -365,18 +411,48 @@
 </div>
 
 <script>
-  /* 出席作家名單：確定後填進這個陣列，2F 面板自動出卡片。
-     每筆 {name:"作家", works:["書名","書名"]}，works 可空。 */
+  /* ── 出席作家：Lighter 指定名單後，把名字填進 AUTHORS（只填名字）。
+        大頭照從 PHOTOS 對名字取；6F 的書封從 CATALOG 對名字取（幻華出版品平面封），沒有就不出。
+        照片檔在 img/authors/，書封在 img/works/。 ── */
   var AUTHORS = [];
+
+  var PHOTOS = {"A.Z.":"img/authors/AZ.jpg","Aris 雅豊斯":"img/authors/Aris雅豊斯.jpg","M.S. Zenky":"img/authors/MSZenky.jpg","千筆":"img/authors/千筆.jpg","川千丈":"img/authors/川千丈.jpg","提子墨":"img/authors/提子墨.jpg","既晴":"img/authors/既晴.jpg","林庭毅":"img/authors/林庭毅.jpg","楓雨":"img/authors/楓雨.jpg","海盜船上的花":"img/authors/海盜船上的花.jpg","白帽子":"img/authors/白帽子.jpg","秀霖":"img/authors/秀霖.jpg","逢時":"img/authors/逢時.jpg","陳力航":"img/authors/陳力航.jpg","顏瑜":"img/authors/顏瑜.jpg","高雲章":"img/authors/高雲章.jpg"};
+
+  var CATALOG = {
+    "A.Z.":[{title:"幻象消失之夜",cover:"img/works/huanxiang.jpg"},{title:"謎底揭曉——他們",cover:"img/works/midi.jpg"},{title:"善意",cover:"img/works/shanyi.jpg"},{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true},{title:"偵探的貪吃路線：第八屆林佛兒獎得獎作品集",cover:"img/works/tanchi.jpg",co:true}],
+    "M.S. Zenky":[{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true}],
+    "海盜船上的花":[{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true}],
+    "白帽子":[{title:"後來他們都做了該做的事",cover:"img/works/houlai.jpg"}],
+    "高雲章":[{title:"餐桌上的推理劇",cover:"img/works/canzhuo.jpg"},{title:"異人山——不歸之人",cover:"img/works/yirenshan.jpg"},{title:"三百年後，能在願望樹下見到你嗎？",cover:"img/works/sanbainian.jpg"},{title:"沉睡之火",cover:"img/works/chenshui.jpg"}]
+  };
 
   (function(){
     var g=document.getElementById('authorGrid'), e=document.getElementById('authorEmpty');
+    var wg=document.getElementById('workGrid'), we=document.getElementById('workEmpty');
     if(!AUTHORS.length){g.style.display='none';}
     else{e.style.display='none';
-      g.innerHTML=AUTHORS.map(function(a){return '<div class="au"><b>'+a.name+'</b><div>'+(a.works||[]).map(function(w){return '《'+w+'》';}).join('　')+'</div></div>';}).join('');}
+      g.innerHTML=AUTHORS.map(function(n,i){
+        var ph=PHOTOS[n]?'<img src="'+PHOTOS[n]+'" alt="'+n+'">':n.charAt(0);
+        return '<div class="face"><div class="ph c'+(i%6+1)+'">'+ph+'</div><b>'+n+'</b></div>';}).join('');}
+    var works=[],seen={};
+    AUTHORS.forEach(function(n){(CATALOG[n]||[]).forEach(function(w){if(seen[w.title])return;seen[w.title]=1;works.push({a:w.co?'合著':n,w:w});});});
+    if(!works.length){wg.style.display='none';}
+    else{we.style.display='none';
+      wg.innerHTML=works.map(function(x){return '<div class="wk"><img src="'+x.w.cover+'" alt="'+x.w.title+'"><b>'+x.w.title+'</b><small>'+x.a+'</small></div>';}).join('');}
 
     var fl=document.getElementById('floorlist');
-    [].slice.call(document.querySelectorAll('.floor .plate')).reverse().forEach(function(p){fl.appendChild(p.cloneNode(true));});
+    [].slice.call(document.querySelectorAll('.tower > .plate')).forEach(function(p){var c=p.cloneNode(true);c.removeAttribute('style');fl.appendChild(c);});
+    function leaders(){
+      var tw=document.getElementById('tower'), svg=tw.querySelector('.leaders'); if(!svg) return;
+      var r=tw.getBoundingClientRect(); svg.setAttribute('viewBox','0 0 '+r.width+' '+r.height); var out='';
+      tw.querySelectorAll('.dot').forEach(function(d){
+        var p=tw.querySelector('.tower > .plate[data-f="'+d.getAttribute('data-n')+'"]'); if(!p) return;
+        var a=d.getBoundingClientRect(), b=p.getBoundingClientRect();
+        out+='<line x1="'+(a.left-r.left+a.width/2+11)+'" y1="'+(a.top-r.top+a.height/2)+'" x2="'+(b.left-r.left)+'" y2="'+(b.top-r.top+b.height/2)+'"/>';
+      });
+      svg.innerHTML=out;
+    }
+    leaders(); window.addEventListener('resize',leaders); window.addEventListener('load',leaders);
 
   })();
 </script>
