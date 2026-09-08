@@ -220,6 +220,10 @@
     .pass .ph{padding:8px 12px}
     .pass .ph .air{font-size:8.5px;letter-spacing:.12em;white-space:nowrap}
     .pass .ph .cls{white-space:nowrap}
+    .pass .main{overflow:hidden}
+    .pass .route{grid-template-columns:auto auto 1fr;gap:6px}
+    .pass .route b{font-size:11.5px;letter-spacing:0}
+    .pass .route .arrow{font-size:15px}
     .pass .stub .btn.ember{white-space:nowrap;padding:9px 6px;font-size:12px;letter-spacing:.06em}
     .logos{gap:14px}
     .logos img{height:22px}
@@ -241,6 +245,10 @@
     .talk{grid-template-columns:1fr}
     .works{grid-template-columns:repeat(4,1fr)}
     .row{grid-template-columns:1fr}
+  }
+  @media (max-width:360px){
+    .pass .route{grid-template-columns:1fr;gap:2px;align-items:start}
+    .pass .route .arrow{display:none}
   }
   @media (max-width:420px){
     .tower{grid-template-columns:120px 1fr}
