@@ -159,12 +159,12 @@
   .intro p.ph{color:var(--dim);font-family:var(--sans);font-size:13px;letter-spacing:.06em}
   .lbl2{margin-top:0;font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--dim)}
   /* 2F 出席作家：圓形大頭照 */
-  .faces{display:grid;grid-template-columns:repeat(8,1fr);gap:14px 10px}
-  .face{text-align:center}
-  .face .ph{width:64px;height:64px;border-radius:50%;margin:0 auto;overflow:hidden;background:var(--sky-deep);border:3px solid var(--white);box-shadow:0 0 0 1px var(--rule),0 6px 14px rgba(31,36,41,.14);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:22px;font-weight:600}
+  .faces{display:flex;flex-wrap:wrap;gap:10px 18px}
+  .face{text-align:center;width:72px}
+  .face .ph{width:56px;height:56px;border-radius:50%;margin:0 auto;overflow:hidden;background:var(--sky-deep);border:3px solid var(--white);box-shadow:0 0 0 1px var(--rule),0 6px 14px rgba(31,36,41,.14);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:22px;font-weight:600}
   .face .ph img{width:100%;height:100%;object-fit:cover}
   .face .ph.c2{background:var(--ember)}.face .ph.c3{background:var(--teal)}.face .ph.c4{background:var(--gold)}.face .ph.c5{background:var(--earth)}.face .ph.c6{background:var(--ink)}
-  .face b{display:block;margin-top:6px;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;font-weight:600}
+  .face b{display:block;margin-top:5px;font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;font-weight:600;white-space:nowrap}
   /* 6F 出席作家作品 */
   .works{display:grid;grid-template-columns:repeat(8,1fr);gap:12px 10px;margin-top:12px}
   .wk img{width:100%;aspect-ratio:1/1.42;object-fit:cover;box-shadow:0 4px 12px rgba(31,36,41,.16);background:var(--rule)}
@@ -235,7 +235,6 @@
     .scripts{grid-template-columns:1fr}
     .md{grid-template-columns:1fr;gap:4px}
     .md ul{grid-template-columns:1fr}
-    .faces{grid-template-columns:repeat(4,1fr)}
     .talk{grid-template-columns:1fr}
     .works{grid-template-columns:repeat(4,1fr)}
     .row{grid-template-columns:1fr}
@@ -326,7 +325,7 @@
       <div class="fbody">
       <div class="talk">
         <div><p class="lbl2">與談人</p><div class="people">
-        <div class="pp"><div class="av">紀</div><div><b>紀蔚然</b><small>SPEAKER</small><p class="bio">作家，台灣大學戲劇系名譽教授，2013年國家文藝獎戲劇類得主。2011年出版《私家偵探》，至今已有法文、義大利文、土耳其文、韓文、日文及簡體版六種海外版本，日文版榮獲2022年日本第13屆翻譯小說推理大賞、馬爾他之鷹獎。</p></div></div>
+        <div class="pp"><div class="av">紀</div><div><b>紀蔚然</b><small>SPEAKER</small><p class="bio">作家，台灣大學戲劇系名譽教授，2013年國家文藝獎戲劇類得主。2011年出版《私家偵探》，至今已有六種海外版本，日文版榮獲2022年日本第13屆翻譯小說推理大賞、馬爾他之鷹獎。</p></div></div>
         <div class="pp"><div class="av">祁</div><div><b>祁立峰</b><small>SPEAKER</small><p class="bio">國立臺灣師範大學國文系教授。曾獲臺北文學獎、教育部文藝創作獎、國藝會創作及出版補助。著有散文集《偏安臺北》、《書情點播》，長篇小說《臺北逃亡地圖》、《巨蛋》，專書《讀古文撞到鄉民》、《國文超驚典》。</p></div></div>
         </div></div>
         <div class="intro" id="talkIntro"><span class="lbl">活動介紹</span><p class="ph">活動介紹整理中。</p></div>
