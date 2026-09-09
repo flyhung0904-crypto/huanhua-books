@@ -426,6 +426,31 @@
         照片檔在 img/authors/，書封在 img/works/。 ── */
   var AUTHORS = ["A.Z.","四弄一號","白帽子","既晴","提子墨","閱讀探戈","賴特","沐謙","款款"];
 
+  /* ── 排序＝筆畫順序（Lighter 2026-09-09 指定；之後新增的也一樣）。
+        英文名排最前；中文名依首字筆畫、同筆畫比次字、以此類推。
+        筆畫數查 Unicode Unihan kTotalStrokes；新名字的字若不在 STROKES 表，補一筆再上線。 ── */
+  var STROKES = {"四":5,"弄":7,"一":1,"號":13,"白":5,"帽":12,"子":3,"既":9,"晴":12,"提":12,"墨":15,
+                 "閱":15,"讀":22,"探":11,"戈":4,"賴":16,"特":10,"沐":7,"謙":17,"款":12};
+  function strokeKey(n){
+    var k=[];
+    for(var i=0;i<n.length;i++){
+      var ch=n.charAt(i);
+      if(!(/[一-鿿]/.test(ch))){return null;}
+      if(!(ch in STROKES)){console.warn('STROKES 表缺字：'+ch+'（'+n+'）');k.push(999);}else{k.push(STROKES[ch]);}
+    }
+    return k;
+  }
+  AUTHORS.sort(function(a,b){
+    var ka=strokeKey(a), kb=strokeKey(b);
+    if(!ka&&!kb) return a.localeCompare(b);
+    if(!ka) return -1; if(!kb) return 1;
+    for(var i=0;i<Math.max(ka.length,kb.length);i++){
+      var x=ka[i]===undefined?0:ka[i], y=kb[i]===undefined?0:kb[i];
+      if(x!==y) return x-y;
+    }
+    return 0;
+  });
+
   var PHOTOS = {"A.Z.":"img/authors/AZ.jpg","Aris 雅豊斯":"img/authors/Aris雅豊斯.jpg","M.S. Zenky":"img/authors/MSZenky.jpg","千筆":"img/authors/千筆.jpg","川千丈":"img/authors/川千丈.jpg","提子墨":"img/authors/提子墨.jpg","既晴":"img/authors/既晴.jpg","林庭毅":"img/authors/林庭毅.jpg","楓雨":"img/authors/楓雨.jpg","海盜船上的花":"img/authors/海盜船上的花.jpg","白帽子":"img/authors/白帽子.jpg","秀霖":"img/authors/秀霖.jpg","逢時":"img/authors/逢時.jpg","陳力航":"img/authors/陳力航.jpg","顏瑜":"img/authors/顏瑜.jpg","高雲章":"img/authors/高雲章.jpg","賴特":"img/authors/賴特.jpg","閱讀探戈":"img/authors/閱讀探戈.jpg","四弄一號":"img/authors/四弄一號.jpg","沐謙":"img/authors/沐謙.jpg","款款":"img/authors/款款.jpg"};
 
   var CATALOG = {
