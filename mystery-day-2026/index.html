@@ -425,13 +425,13 @@
         大頭照從 PHOTOS 對名字取；6F 的書封從 CATALOG 對名字取（幻華出版品平面封），沒有就不出。
         照片檔在 img/authors/，書封在 img/works/。
         ⛔ 6F 作品圖只收幻華出版的單行本（含合輯，co:true）；雜誌篇目一律不上（Lighter 2026-09-11 裁示）。 ── */
-  var AUTHORS = ["A.Z.","四弄一號","白帽子","既晴","提子墨","閱讀探戈","賴特","沐謙","款款","林庭毅","高雲章","班傑明"];
+  var AUTHORS = ["A.Z.","M.S. Zenky","四弄一號","白帽子","宅炸裂","既晴","提子墨","閱讀探戈","賴特","沐謙","款款","林庭毅","高雲章","班傑明"];
 
   /* ── 排序＝筆畫順序（Lighter 2026-09-09 指定；之後新增的也一樣）。
         英文名排最前；中文名依首字筆畫、同筆畫比次字、以此類推。
         筆畫數查 Unicode Unihan kTotalStrokes；新名字的字若不在 STROKES 表，補一筆再上線。 ── */
   var STROKES = {"四":5,"弄":7,"一":1,"號":13,"白":5,"帽":12,"子":3,"既":9,"晴":12,"提":12,"墨":15,
-                 "閱":15,"讀":22,"探":11,"戈":4,"賴":16,"特":10,"沐":7,"謙":17,"款":12,"林":8,"庭":10,"毅":15,"高":10,"雲":12,"章":11,"班":10,"傑":12,"明":8};
+                 "閱":15,"讀":22,"探":11,"戈":4,"賴":16,"特":10,"沐":7,"謙":17,"款":12,"林":8,"庭":10,"毅":15,"高":10,"雲":12,"章":11,"班":10,"傑":12,"明":8,"宅":6,"炸":9,"裂":12};
   function strokeKey(n){
     var k=[];
     for(var i=0;i<n.length;i++){
@@ -458,6 +458,7 @@
     "A.Z.":[{title:"幻象消失之夜",cover:"img/works/huanxiang.jpg"},{title:"謎底揭曉——他們",cover:"img/works/midi.jpg"},{title:"善意",cover:"img/works/shanyi.jpg"},{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true},{title:"偵探的貪吃路線：第八屆林佛兒獎得獎作品集",cover:"img/works/tanchi.jpg",co:true}],
     "M.S. Zenky":[{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true}],
     "海盜船上的花":[{title:"戀愛條款未公開",cover:"img/works/lianai.jpg",co:true}],
+    "宅炸裂":[{title:"偵探的貪吃路線：第八屆林佛兒獎得獎作品集",cover:"img/works/tanchi.jpg",co:true}],
     "白帽子":[{title:"後來他們都做了該做的事",cover:"img/works/houlai.jpg",co:true}],
     "款款":[{title:"後來他們都做了該做的事",cover:"img/works/houlai.jpg",co:true}],
     "四弄一號":[{title:"交錯",cover:"img/works/jiaocuo.jpg"},{title:"當我們同在一起",cover:"img/works/tongzai.jpg"},{title:"後來他們都做了該做的事",cover:"img/works/houlai.jpg",co:true},{title:"玉觀音：第七屆林佛兒獎得獎作品集",cover:"img/works/yuguanyin.jpg",co:true}],
