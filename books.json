@@ -1417,7 +1417,13 @@
  {
   "sheet": "Collection",
   "no": 20,
-  "links": {},
+  "links": {
+   "金石堂": "https://www.kingstone.com.tw/basic/2018631013670",
+   "誠品": "https://www.eslite.com/product/10012030392683236567004",
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736149",
+   "三民書局": "https://www.sanmin.com.tw/product/index/015882105",
+   "讀冊": "https://www.taaze.tw/products/11101100077.html"
+  },
   "title": "焚身",
   "author": "A.Z.",
   "isbn": "9786267750957",
@@ -2777,8 +2783,10 @@
   "no": 37,
   "links": {
    "讀墨": "https://readmoo.com/book/210499819000101",
+   "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=173556",
    "Google Play": "https://play.google.com/store/books/details?id=QxkNEgAAQBAJ",
-   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15697848"
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15697848",
+   "雲端書庫": "https://www.ebookservice.tw/nt/book/36f28f3b-4006-4edd-9e9d-5c99d4517764"
   },
   "title": "班森殺人事件",
   "author": "Ｓ・Ｓ・范・達因",
@@ -2795,9 +2803,11 @@
   "no": 38,
   "links": {
    "讀墨": "https://readmoo.com/book/210499812000101",
+   "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=172820",
    "Google Play": "https://play.google.com/store/books/details?id=RxkNEgAAQBAJ",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15697849",
-   "華藝": "https://www.airitibooks.com/Publication/Details?publicationID=P202609160016"
+   "華藝": "https://www.airitibooks.com/Publication/Details?publicationID=P202609160016",
+   "雲端書庫": "https://www.ebookservice.tw/nt/book/7c6904cf-c20b-404f-9458-a4c8e3547fe4"
   },
   "title": "金絲雀殺人事件",
   "author": "Ｓ・Ｓ・范・達因",
@@ -2812,7 +2822,9 @@
  {
   "sheet": "Classic",
   "no": 39,
-  "links": {},
+  "links": {
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736152"
+  },
   "title": "格林家殺人事件",
   "author": "Ｓ・Ｓ・范・達因",
   "isbn": "9786267750988",
@@ -2826,7 +2838,9 @@
  {
   "sheet": "Classic",
   "no": 40,
-  "links": {},
+  "links": {
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736151"
+  },
   "title": "主教殺人事件",
   "author": "Ｓ・Ｓ・范・達因",
   "isbn": "9786267750995",
