@@ -2852,7 +2852,13 @@
   "sheet": "Classic",
   "no": 39,
   "links": {
-   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736152"
+   "讀墨": "https://readmoo.com/book/210502237000101",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/oRCb8tJZKTu-ILZk8I8Meg",
+   "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=174214",
+   "Pubu": "https://www.pubu.com.tw/ebook/697004",
+   "誠品": "https://www.eslite.com/product/10072302132683238707002",
+   "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736152",
+   "博客來電子書": "https://www.books.com.tw/products/E050358293"
   },
   "title": "格林家殺人事件",
   "author": "Ｓ・Ｓ・范・達因",
@@ -2868,6 +2874,11 @@
   "sheet": "Classic",
   "no": 40,
   "links": {
+   "讀墨": "https://readmoo.com/book/210502236000101",
+   "Kobo": "https://www.kobo.com/tw/zh/ebook/xE0YuZPsLjOfe3dcvlyG8g",
+   "UDN讀書吧": "https://reading.udn.com/ebook/store/store_product.do?pid=174213",
+   "Pubu": "https://www.pubu.com.tw/ebook/697003",
+   "誠品": "https://www.eslite.com/product/10072302132683238706005",
    "momo": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15736151"
   },
   "title": "主教殺人事件",
